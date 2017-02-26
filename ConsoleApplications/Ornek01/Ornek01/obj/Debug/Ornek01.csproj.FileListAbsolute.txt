@@ -1,0 +1,6 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Ornek01\Ornek01\bin\Debug\Ornek01.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Ornek01\Ornek01\bin\Debug\Ornek01.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Ornek01\Ornek01\bin\Debug\Ornek01.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Ornek01\Ornek01\obj\Debug\Ornek01.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Ornek01\Ornek01\obj\Debug\Ornek01.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Ornek01\Ornek01\obj\Debug\Ornek01.pdb

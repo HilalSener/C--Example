@@ -1,0 +1,6 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Toplama\Toplama\bin\Debug\Toplama.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Toplama\Toplama\bin\Debug\Toplama.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Toplama\Toplama\bin\Debug\Toplama.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Toplama\Toplama\obj\Debug\Toplama.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Toplama\Toplama\obj\Debug\Toplama.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\Toplama\Toplama\obj\Debug\Toplama.pdb

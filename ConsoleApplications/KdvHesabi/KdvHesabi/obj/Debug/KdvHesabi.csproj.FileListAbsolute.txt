@@ -1,0 +1,5 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvHesabi\KdvHesabi\bin\Debug\KdvHesabi.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvHesabi\KdvHesabi\bin\Debug\KdvHesabi.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvHesabi\KdvHesabi\bin\Debug\KdvHesabi.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvHesabi\KdvHesabi\obj\Debug\KdvHesabi.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvHesabi\KdvHesabi\obj\Debug\KdvHesabi.pdb
