@@ -36,6 +36,11 @@ namespace KdvSecimi
                 ToplamFiyat = Kdv + Fiyat;
                 Console.WriteLine(ToplamFiyat);
             }
+            else
+            {
+                Console.WriteLine("1-3 arasında seçim yapınız!");
+            }
+
             Console.ReadLine();
         }
     }
