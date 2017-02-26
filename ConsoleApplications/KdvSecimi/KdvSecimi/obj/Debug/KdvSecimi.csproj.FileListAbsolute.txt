@@ -3,3 +3,4 @@ C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvSecimi\KdvSecimi\bi
 C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvSecimi\KdvSecimi\bin\Debug\KdvSecimi.pdb
 C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvSecimi\KdvSecimi\obj\Debug\KdvSecimi.exe
 C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvSecimi\KdvSecimi\obj\Debug\KdvSecimi.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\KdvSecimi\KdvSecimi\obj\Debug\KdvSecimi.csprojResolveAssemblyReference.cache
