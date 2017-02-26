@@ -1,0 +1,6 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\SwitchCase\SwitchCase\bin\Debug\SwitchCase.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\SwitchCase\SwitchCase\bin\Debug\SwitchCase.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\SwitchCase\SwitchCase\bin\Debug\SwitchCase.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\SwitchCase\SwitchCase\obj\Debug\SwitchCase.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\SwitchCase\SwitchCase\obj\Debug\SwitchCase.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\SwitchCase\SwitchCase\obj\Debug\SwitchCase.pdb
