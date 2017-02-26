@@ -10,7 +10,7 @@ namespace ifelse
     {
         static void Main(string[] args)
         {
-            //klavyeden girilen iki sayıdan büyük olanı ekranda Büyük: sayı şeklinde gösteren uygulamayı yazınız.
+            //klavyeden girilen iki sayıdan büyük olanı ekranda Büyük sayı: sayı şeklinde gösteren uygulamayı yazınız.
             Console.Write("1.Sayıyı giriniz: ");
             int Sayi1 = Convert.ToInt32(Console.ReadLine());
 
@@ -18,9 +18,11 @@ namespace ifelse
             int Sayi2 = Convert.ToInt32(Console.ReadLine());
 
             if (Sayi1 > Sayi2)
-                Console.WriteLine(Sayi1 + " > " + Sayi2);
+                Console.Write("Büyük sayı: " + Sayi1);
+                //Console.WriteLine(Sayi1 + " > " + Sayi2);
             else
-                Console.WriteLine(Sayi2 + " > " + Sayi1);
+                Console.Write("Büyük sayı: " + Sayi2);
+                //Console.WriteLine(Sayi2 + " > " + Sayi1);
 
             Console.ReadKey();
         }
