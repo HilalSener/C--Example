@@ -20,9 +20,11 @@ namespace ifelse
             if (Sayi1 > Sayi2)
                 Console.Write("Büyük sayı: " + Sayi1);
                 //Console.WriteLine(Sayi1 + " > " + Sayi2);
-            else
+            else if (Sayi2 > Sayi1)
                 Console.Write("Büyük sayı: " + Sayi2);
                 //Console.WriteLine(Sayi2 + " > " + Sayi1);
+            else
+                Console.WriteLine("İki sayı birbirine eşittir.");
 
             Console.ReadKey();
         }
