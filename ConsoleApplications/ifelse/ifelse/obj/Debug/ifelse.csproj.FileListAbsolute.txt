@@ -1,0 +1,6 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ifelse\ifelse\bin\Debug\ifelse.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ifelse\ifelse\bin\Debug\ifelse.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ifelse\ifelse\bin\Debug\ifelse.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ifelse\ifelse\obj\Debug\ifelse.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ifelse\ifelse\obj\Debug\ifelse.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ifelse\ifelse\obj\Debug\ifelse.pdb
