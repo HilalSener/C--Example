@@ -33,7 +33,7 @@ namespace SwitchCase
             Console.Write("Bir mevsim giriniz: ");
             string Mevsim = Console.ReadLine();
 
-            switch(Mevsim)
+            switch(Mevsim.ToUpper())
             {
                 case "Sonbahar":
                     Console.WriteLine("Eylül \nEkim \nKasım");
