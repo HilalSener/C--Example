@@ -1,1 +1,7 @@
 C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\DortIslem\DortIslem\bin\Debug\DortIslem.exe.config
+C:\Users\ayşe\Documents\Github\CSharp-Example\ConsoleApplications\DortIslem\DortIslem\bin\Debug\DortIslem.exe.config
+C:\Users\ayşe\Documents\Github\CSharp-Example\ConsoleApplications\DortIslem\DortIslem\bin\Debug\DortIslem.exe
+C:\Users\ayşe\Documents\Github\CSharp-Example\ConsoleApplications\DortIslem\DortIslem\bin\Debug\DortIslem.pdb
+C:\Users\ayşe\Documents\Github\CSharp-Example\ConsoleApplications\DortIslem\DortIslem\obj\Debug\DortIslem.csprojResolveAssemblyReference.cache
+C:\Users\ayşe\Documents\Github\CSharp-Example\ConsoleApplications\DortIslem\DortIslem\obj\Debug\DortIslem.exe
+C:\Users\ayşe\Documents\Github\CSharp-Example\ConsoleApplications\DortIslem\DortIslem\obj\Debug\DortIslem.pdb
