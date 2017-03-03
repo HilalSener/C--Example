@@ -1,2 +1,7 @@
 C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\SinifGecme\SinifGecme\bin\Debug\SinifGecme.exe.config
 C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\bin\Debug\SinifGecme.exe.config
+C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\bin\Debug\SinifGecme.exe
+C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\bin\Debug\SinifGecme.pdb
+C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.csprojResolveAssemblyReference.cache
+C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.exe
+C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.pdb
