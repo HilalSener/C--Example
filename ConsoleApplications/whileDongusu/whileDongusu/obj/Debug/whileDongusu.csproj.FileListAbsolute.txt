@@ -1,0 +1,6 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\whileDongusu\whileDongusu\bin\Debug\whileDongusu.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\whileDongusu\whileDongusu\bin\Debug\whileDongusu.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\whileDongusu\whileDongusu\bin\Debug\whileDongusu.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\whileDongusu\whileDongusu\obj\Debug\whileDongusu.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\whileDongusu\whileDongusu\obj\Debug\whileDongusu.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\whileDongusu\whileDongusu\obj\Debug\whileDongusu.pdb
