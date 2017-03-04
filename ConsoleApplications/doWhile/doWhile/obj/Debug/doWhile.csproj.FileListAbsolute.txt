@@ -1,0 +1,6 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\doWhile\doWhile\bin\Debug\doWhile.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\doWhile\doWhile\bin\Debug\doWhile.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\doWhile\doWhile\bin\Debug\doWhile.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\doWhile\doWhile\obj\Debug\doWhile.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\doWhile\doWhile\obj\Debug\doWhile.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\doWhile\doWhile\obj\Debug\doWhile.pdb
