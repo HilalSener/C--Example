@@ -13,10 +13,10 @@ namespace DortIslem
             //Klavyeden girilen iki sayıya menüden seçilen işlemi uygulayıp sonucu ekrana yazdıran uygulamayı yazınız.
             basla:
             Console.Write("1.Sayıyı giriniz: ");
-            int Sayi1= Convert.ToInt32(Console.ReadLine());
+            double Sayi1= Convert.ToInt32(Console.ReadLine());
 
             Console.Write("2.Sayıyı giriniz: ");
-            int Sayi2= Convert.ToInt32(Console.ReadLine());
+            double Sayi2= Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("1.Toplama \n2.Çıkarma \n3.Çarpma \n4.Bölme");
             Console.Write("İşleminizi seçiniz: ");
@@ -34,9 +34,16 @@ namespace DortIslem
                     Console.WriteLine(Sayi1 + "*" + Sayi2 + "=" + (Sayi1 * Sayi2));
                     break;
                 case "4":
-                    Console.WriteLine(Sayi1 + "/" + Sayi2 + "=" + (Sayi1 / Sayi2));
+                    if (Sayi2 != 0)
+                        Console.WriteLine(Sayi1 + "/" + Sayi2 + "=" + (Sayi1 / Sayi2));
+                    else
+                        Console.WriteLine("Sıfıra bölme işlemi yapılamaz!");
+                    break;
+                default:
+                    Console.WriteLine("1 - 4 arası seçim yapmalısınız!");
                     break;
             }
+
             Console.WriteLine("Devam etmek istiyor musunuz? (E/H)");
             string cevap = Console.ReadLine();
             if (cevap.ToUpper() == "E")
