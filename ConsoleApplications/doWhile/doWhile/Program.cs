@@ -21,6 +21,8 @@ namespace doWhile
                 Console.Write("Şifrenizi giriniz: ");
                 sifre = Console.ReadLine();
             } while (sifre != "9999");
+            Console.WriteLine("Hoşgeldiniz...");
+
             Console.ReadKey();
         }
     }
