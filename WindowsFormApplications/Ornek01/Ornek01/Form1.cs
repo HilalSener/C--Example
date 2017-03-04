@@ -16,5 +16,18 @@ namespace Ornek01
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Form yükleniyor...");
+            this.Text = "Formun başlığını değiştirdim...";
+        }
+
+        private void TamamBtn_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Tamam butonuna tıklandı!");
+            MessageBox.Show("Hoşgeldin, " + AdiTxt.Text);
+            TamamBtn.Text = "Tıklandı";
+        }
     }
 }
