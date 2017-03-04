@@ -1,0 +1,5 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ToplamBulma\ToplamBulma\bin\Debug\ToplamBulma.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ToplamBulma\ToplamBulma\bin\Debug\ToplamBulma.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ToplamBulma\ToplamBulma\bin\Debug\ToplamBulma.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ToplamBulma\ToplamBulma\obj\Debug\ToplamBulma.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\ToplamBulma\ToplamBulma\obj\Debug\ToplamBulma.pdb
