@@ -1,0 +1,9 @@
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\forDongusu\forDongusu\bin\Debug\forDongusu.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\forDongusu\forDongusu\bin\Debug\forDongusu.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\forDongusu\forDongusu\bin\Debug\forDongusu.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\forDongusu\forDongusu\obj\Debug\forDongusu.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\forDongusu\forDongusu\obj\Debug\forDongusu.exe
+C:\Users\Bireysel\Documents\HSS-Net13\ConsoleApplications\forDongusu\forDongusu\obj\Debug\forDongusu.pdb
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\forDongusu\forDongusu\bin\Debug\forDongusu.exe.config
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\forDongusu\forDongusu\obj\Debug\forDongusu.exe
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\forDongusu\forDongusu\obj\Debug\forDongusu.pdb
