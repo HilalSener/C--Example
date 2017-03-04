@@ -13,10 +13,31 @@ namespace SinifGecme
             //alınan iki notun ortalamasını hesaplayıp 50 den büyük ve eşitse geçti, değilse kaldı. 90 - 100 arası A ile geçti. 80-90 B. 80-70 C. 70-60 D. 60-50 E gibi.
             basla:
             Console.Write("1.Notu giriniz: ");
-            int Not1 = Convert.ToInt32(Console.ReadLine());
+            float Not1 = Convert.ToSingle(Console.ReadLine());
+            if (Not1 > 100)
+            {
+                Console.WriteLine("Not1 100 den büyük olamaz!");
+                goto basla;
+            }
+            else if(Not1 < 0)
+            {
+                Console.WriteLine("Not1 0 dan küçük olamaz!");
+                goto basla;
+            }
 
+            NotGiris2:
             Console.Write("2.Notu giriniz: ");
-            int Not2 = Convert.ToInt32(Console.ReadLine());
+            float Not2 = Convert.ToSingle(Console.ReadLine());
+            if (Not2 > 100)
+            {
+                Console.WriteLine("Not2 100 den büyük olamaz!");
+                goto NotGiris2;
+            }
+            else if (Not2 < 0)
+            {
+                Console.WriteLine("Not2 0 dan küçük olamaz!");
+                goto NotGiris2;
+            }
 
             float Ortalama = (Not1 + Not2) / 2f;
 

@@ -5,3 +5,9 @@ C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\bin\Debug\Sin
 C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.csprojResolveAssemblyReference.cache
 C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.exe
 C:\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.pdb
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\bin\Debug\SinifGecme.exe.config
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\bin\Debug\SinifGecme.exe
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\bin\Debug\SinifGecme.pdb
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.exe
+C:\Users\Bireysel\Documents\Github\CSharp-Example\ConsoleApplications\SinifGecme\SinifGecme\obj\Debug\SinifGecme.pdb
