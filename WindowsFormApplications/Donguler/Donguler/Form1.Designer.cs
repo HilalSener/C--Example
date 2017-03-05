@@ -43,14 +43,14 @@
             // lbSayilar
             // 
             this.lbSayilar.FormattingEnabled = true;
-            this.lbSayilar.Location = new System.Drawing.Point(92, 59);
+            this.lbSayilar.Location = new System.Drawing.Point(79, 53);
             this.lbSayilar.Name = "lbSayilar";
-            this.lbSayilar.Size = new System.Drawing.Size(98, 95);
+            this.lbSayilar.Size = new System.Drawing.Size(98, 134);
             this.lbSayilar.TabIndex = 0;
             // 
             // btnSayilar
             // 
-            this.btnSayilar.Location = new System.Drawing.Point(92, 27);
+            this.btnSayilar.Location = new System.Drawing.Point(79, 21);
             this.btnSayilar.Name = "btnSayilar";
             this.btnSayilar.Size = new System.Drawing.Size(98, 23);
             this.btnSayilar.TabIndex = 1;
@@ -61,7 +61,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 165);
+            this.label1.Location = new System.Drawing.Point(20, 198);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // txtToplam
             // 
-            this.txtToplam.Location = new System.Drawing.Point(92, 161);
+            this.txtToplam.Location = new System.Drawing.Point(79, 194);
             this.txtToplam.Name = "txtToplam";
             this.txtToplam.ReadOnly = true;
             this.txtToplam.Size = new System.Drawing.Size(98, 20);
@@ -79,14 +79,14 @@
             // lbCiftSayilar
             // 
             this.lbCiftSayilar.FormattingEnabled = true;
-            this.lbCiftSayilar.Location = new System.Drawing.Point(231, 59);
+            this.lbCiftSayilar.Location = new System.Drawing.Point(218, 53);
             this.lbCiftSayilar.Name = "lbCiftSayilar";
-            this.lbCiftSayilar.Size = new System.Drawing.Size(98, 95);
+            this.lbCiftSayilar.Size = new System.Drawing.Size(98, 134);
             this.lbCiftSayilar.TabIndex = 0;
             // 
             // btnCift
             // 
-            this.btnCift.Location = new System.Drawing.Point(231, 27);
+            this.btnCift.Location = new System.Drawing.Point(218, 21);
             this.btnCift.Name = "btnCift";
             this.btnCift.Size = new System.Drawing.Size(98, 23);
             this.btnCift.TabIndex = 1;
@@ -96,7 +96,7 @@
             // 
             // txtToplamCift
             // 
-            this.txtToplamCift.Location = new System.Drawing.Point(231, 161);
+            this.txtToplamCift.Location = new System.Drawing.Point(218, 194);
             this.txtToplamCift.Name = "txtToplamCift";
             this.txtToplamCift.ReadOnly = true;
             this.txtToplamCift.Size = new System.Drawing.Size(98, 20);
@@ -106,14 +106,14 @@
             // lbTekSayilar
             // 
             this.lbTekSayilar.FormattingEnabled = true;
-            this.lbTekSayilar.Location = new System.Drawing.Point(367, 59);
+            this.lbTekSayilar.Location = new System.Drawing.Point(354, 53);
             this.lbTekSayilar.Name = "lbTekSayilar";
-            this.lbTekSayilar.Size = new System.Drawing.Size(98, 95);
+            this.lbTekSayilar.Size = new System.Drawing.Size(98, 134);
             this.lbTekSayilar.TabIndex = 0;
             // 
             // btnTek
             // 
-            this.btnTek.Location = new System.Drawing.Point(367, 27);
+            this.btnTek.Location = new System.Drawing.Point(354, 21);
             this.btnTek.Name = "btnTek";
             this.btnTek.Size = new System.Drawing.Size(98, 23);
             this.btnTek.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             // txtToplamTek
             // 
-            this.txtToplamTek.Location = new System.Drawing.Point(367, 161);
+            this.txtToplamTek.Location = new System.Drawing.Point(354, 194);
             this.txtToplamTek.Name = "txtToplamTek";
             this.txtToplamTek.ReadOnly = true;
             this.txtToplamTek.Size = new System.Drawing.Size(98, 20);
@@ -135,7 +135,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(523, 211);
+            this.ClientSize = new System.Drawing.Size(523, 232);
             this.Controls.Add(this.txtToplamTek);
             this.Controls.Add(this.txtToplamCift);
             this.Controls.Add(this.txtToplam);
