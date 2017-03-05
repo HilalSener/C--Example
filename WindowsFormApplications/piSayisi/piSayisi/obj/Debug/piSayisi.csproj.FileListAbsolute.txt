@@ -6,3 +6,4 @@ C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\piSayisi\piSayisi\
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\piSayisi\piSayisi\bin\Debug\piSayisi.pdb
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\piSayisi\piSayisi\obj\Debug\piSayisi.exe
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\piSayisi\piSayisi\obj\Debug\piSayisi.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\piSayisi\piSayisi\obj\Debug\piSayisi.csprojResolveAssemblyReference.cache

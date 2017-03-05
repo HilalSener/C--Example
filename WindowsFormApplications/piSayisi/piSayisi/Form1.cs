@@ -17,10 +17,11 @@ namespace piSayisi
             InitializeComponent();
         }
 
-        float Pi = 3.14f;
+        const float Pi = 3.14f;
         float r;
         private void btnDaireninAlani_Click(object sender, EventArgs e)
         {
+            //Pi = 3.143423442f; constrant(sabit) olarak tanımlananan değerler program içerisinde değiştirilemezler.
             if(txtYariCap.Text.Trim() != "")
             {
                 r = Convert.ToSingle(txtYariCap.Text);
@@ -41,6 +42,22 @@ namespace piSayisi
             }
             else
                 MessageBox.Show("Yarı çapı girmelisiniz!");
+        }
+
+        private void btnHesapla_Click(object sender, EventArgs e)
+        {
+            r = Convert.ToSingle(txtYariCap.Text);
+            if (rbCevre.Checked == true)
+            {
+                float Cevresi = 2 * Pi * r;
+                MessageBox.Show("Çevresi= " + Cevresi);
+            }
+            else
+            {
+                float Alani = Pi * r * r;
+                MessageBox.Show("Alanı= " + Alani);
+            }
+
         }
     }
 }
