@@ -28,7 +28,7 @@ namespace Toplama
             //MessageBox.Show("Toplama işleminin sonucu= " + Toplama);
             //MessageBox.Show("Toplama= " + Convert.ToString((txtSayi1.Text + txtSayi2.Text)));
 
-            if (txtSayi1.Text != "" || txtSayi2.Text != "")
+            if (txtSayi1.Text.Trim() != "" && txtSayi2.Text.Trim() != "")
                 txtSonuc.Text = (Convert.ToInt32(txtSayi1.Text) + Convert.ToUInt32(txtSayi2.Text)).ToString();
             else
                 MessageBox.Show("Sayıları girmelisiniz!");

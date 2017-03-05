@@ -7,3 +7,6 @@ C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Toplama\Toplama\ob
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Toplama\Toplama\obj\Debug\Toplama.csproj.GenerateResource.Cache
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Toplama\Toplama\obj\Debug\Toplama.exe
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Toplama\Toplama\obj\Debug\Toplama.pdb
+C:\Users\Bireysel\Documents\Github\CSharp-Example\WindowsFormApplications\Toplama\Toplama\bin\Debug\Toplama.exe.config
+C:\Users\Bireysel\Documents\Github\CSharp-Example\WindowsFormApplications\Toplama\Toplama\obj\Debug\Toplama.exe
+C:\Users\Bireysel\Documents\Github\CSharp-Example\WindowsFormApplications\Toplama\Toplama\obj\Debug\Toplama.pdb
