@@ -1,0 +1,9 @@
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\bin\Debug\BizimYaris.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\bin\Debug\BizimYaris.exe
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\bin\Debug\BizimYaris.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\obj\Debug\BizimYaris.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\obj\Debug\BizimYaris.Form1.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\obj\Debug\BizimYaris.Properties.Resources.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\obj\Debug\BizimYaris.csproj.GenerateResource.Cache
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\obj\Debug\BizimYaris.exe
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\BizimYaris\BizimYaris\obj\Debug\BizimYaris.pdb
