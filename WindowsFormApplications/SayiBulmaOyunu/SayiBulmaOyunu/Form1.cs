@@ -42,6 +42,7 @@ namespace SayiBulmaOyunu
                     MessageBox.Show("Tahmininiz büyük :(");
                 }
                 txtTahmin.Clear();
+                txtTahmin.Focus();
             }
             else
                 MessageBox.Show("Bir tahminde bulunmalısınız!");
@@ -50,6 +51,18 @@ namespace SayiBulmaOyunu
         private void Form1_Load(object sender, EventArgs e)
         {
             TutulanSayi = rnd.Next(1,51);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGameOver_Click(object sender, EventArgs e)
+        {
+            sayac = 0;
+            TutulanSayi = rnd.Next(1, 51);
+            txtTahmin.Focus();
         }
     }
 }

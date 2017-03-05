@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDene = new System.Windows.Forms.Button();
+            this.btnGameOver = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTahmin
@@ -70,6 +72,26 @@
             this.btnDene.UseVisualStyleBackColor = true;
             this.btnDene.Click += new System.EventHandler(this.btnDene_Click);
             // 
+            // btnGameOver
+            // 
+            this.btnGameOver.Location = new System.Drawing.Point(15, 113);
+            this.btnGameOver.Name = "btnGameOver";
+            this.btnGameOver.Size = new System.Drawing.Size(75, 38);
+            this.btnGameOver.TabIndex = 5;
+            this.btnGameOver.Text = "GAME OVER";
+            this.btnGameOver.UseVisualStyleBackColor = true;
+            this.btnGameOver.Click += new System.EventHandler(this.btnGameOver_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(251, 113);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 38);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "EXİT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnDene;
@@ -77,6 +99,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Salmon;
             this.ClientSize = new System.Drawing.Size(341, 261);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnGameOver);
             this.Controls.Add(this.btnDene);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -95,6 +119,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDene;
+        private System.Windows.Forms.Button btnGameOver;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
