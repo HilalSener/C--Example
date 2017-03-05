@@ -1,0 +1,9 @@
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\bin\Debug\Donguler.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\bin\Debug\Donguler.exe
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\bin\Debug\Donguler.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\obj\Debug\Donguler.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\obj\Debug\Donguler.Form1.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\obj\Debug\Donguler.Properties.Resources.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\obj\Debug\Donguler.csproj.GenerateResource.Cache
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\obj\Debug\Donguler.exe
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Donguler\Donguler\obj\Debug\Donguler.pdb
