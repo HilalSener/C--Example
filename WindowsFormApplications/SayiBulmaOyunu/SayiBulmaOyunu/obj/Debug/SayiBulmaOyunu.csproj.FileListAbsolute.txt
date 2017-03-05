@@ -1,0 +1,9 @@
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\bin\Debug\SayiBulmaOyunu.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\bin\Debug\SayiBulmaOyunu.exe
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\bin\Debug\SayiBulmaOyunu.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.Form1.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.Properties.Resources.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.csproj.GenerateResource.Cache
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.exe
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.pdb
