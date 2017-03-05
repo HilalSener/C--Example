@@ -83,6 +83,7 @@
             this.Controls.Add(this.txtTahmin);
             this.Name = "Form1";
             this.Text = "Sayı Tahmin Oyunu";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
