@@ -17,20 +17,26 @@ namespace SayiBulmaOyunu
             InitializeComponent();
         }
 
+        //Radio butonlar ile seviyelendirme yapılacak!
+        //Tahmin istenilen sayı aralığından büyükse uyarı çıkar!
+        //Seviyeler ile tahmin sayısını azalt veya artır!
+        //Ekranda ne kadar hakkı kaldı göster!
+
         int TutulanSayi;
         int Tahmin;
-        int sayac;
+        int Sayac;
+        int Hak = 10;
         Random rnd = new Random();
         private void btnDene_Click(object sender, EventArgs e)
         {
             if (txtTahmin.Text.Trim() != "")
             {
-                sayac++;
+                Sayac++;
                 Tahmin = Convert.ToInt32(txtTahmin.Text);
                 if (Tahmin == TutulanSayi)
                 {
-                    MessageBox.Show("Tebrikler, " + sayac + " defa da bildiniz :)");
-                    sayac = 0;
+                    MessageBox.Show("Tebrikler, " + Sayac + " defa da bildiniz :)");
+                    Sayac = 0;
                     TutulanSayi = rnd.Next(1, 51); //Her yeni oyuna geçildiğinde rastgele bir sayı tutulacak.
                 }
                 else if (Tahmin < TutulanSayi)
@@ -60,7 +66,7 @@ namespace SayiBulmaOyunu
 
         private void btnGameOver_Click(object sender, EventArgs e)
         {
-            sayac = 0;
+            Sayac = 0;
             TutulanSayi = rnd.Next(1, 51);
             txtTahmin.Focus();
         }
