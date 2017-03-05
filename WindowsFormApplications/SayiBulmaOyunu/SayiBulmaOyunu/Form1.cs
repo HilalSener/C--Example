@@ -26,8 +26,11 @@ namespace SayiBulmaOyunu
                 Tahmin = Convert.ToInt32(txtTahmin.Text);
                 if (Tahmin == TutulanSayi)
                     MessageBox.Show("Tebrikler tahminin doğru :)");
-                else
-                    MessageBox.Show("Tutmadı tekrar dene ;)");
+                else if(Tahmin < TutulanSayi)
+                    MessageBox.Show("Tahmininiz küçük :(");
+                else if(Tahmin > TutulanSayi)
+                    MessageBox.Show("Tahmininiz büyük :(");
+                txtTahmin.Clear();
             }
             else
                 MessageBox.Show("Bir tahminde bulunmalısınız!");
