@@ -7,3 +7,12 @@ C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\Say
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.csproj.GenerateResource.Cache
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.exe
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\bin\Debug\SayiBulmaOyunu.exe.config
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.exe
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\bin\Debug\SayiBulmaOyunu.exe
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\bin\Debug\SayiBulmaOyunu.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.csprojResolveAssemblyReference.cache
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.Form1.resources
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.Properties.Resources.resources
+C:\Github\CSharp-Example\WindowsFormApplications\SayiBulmaOyunu\SayiBulmaOyunu\obj\Debug\SayiBulmaOyunu.csproj.GenerateResource.Cache
