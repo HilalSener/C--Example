@@ -30,7 +30,16 @@ namespace ListBox
 
         private void btnSagaCok_Click(object sender, EventArgs e)
         {
-
+            if(lbKullanicilar.SelectedItems.Count != 0)
+            {
+                for(int i = lbKullanicilar.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    lbSecilenler.Items.Add(lbKullanicilar.SelectedItems[i]);
+                    lbKullanicilar.Items.Remove(lbKullanicilar.SelectedItems[i]);
+                }
+            }
+            else
+                MessageBox.Show("Listeden bir seçim yapmalısınız!");
         }
 
         private void btnSolaTek_Click(object sender, EventArgs e)
@@ -46,7 +55,16 @@ namespace ListBox
 
         private void btnSolaCok_Click(object sender, EventArgs e)
         {
-
+            if(lbSecilenler.SelectedItems.Count != 0)
+            {
+                for(int i = lbSecilenler.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    lbKullanicilar.Items.Add(lbSecilenler.SelectedItems[i].ToString());
+                    lbSecilenler.Items.Remove(lbSecilenler.SelectedItems[i].ToString());
+                }
+            }
+            else
+                MessageBox.Show("Listeden bir seçim yapmalısınız!");
         }
     }
 }
