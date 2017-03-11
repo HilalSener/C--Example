@@ -109,6 +109,9 @@
             this.Controls.Add(this.pb3);
             this.Controls.Add(this.pb2);
             this.Controls.Add(this.pb1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "HSS-NET13 At Yarışları";
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
