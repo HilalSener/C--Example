@@ -1,0 +1,10 @@
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\bin\Debug\ListView.exe.config
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\bin\Debug\ListView.exe
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\bin\Debug\ListView.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\obj\Debug\ListView.csprojResolveAssemblyReference.cache
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\obj\Debug\ListView.Form1.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\obj\Debug\ListView.Properties.Resources.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\obj\Debug\ListView.csproj.GenerateResource.Cache
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\obj\Debug\ListView.exe
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\obj\Debug\ListView.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\ListView\ListView\obj\Debug\ListView.Form2.resources
