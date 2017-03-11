@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.lvDetaylar = new System.Windows.Forms.ListView();
+            this.Modeller = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.İşlemci = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Hafıza = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ekran = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kamera = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Fiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Modeller = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbMarkalar = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -47,12 +47,19 @@
             this.Ekran,
             this.Kamera,
             this.Fiyat});
+            this.lvDetaylar.FullRowSelect = true;
             this.lvDetaylar.Location = new System.Drawing.Point(39, 63);
             this.lvDetaylar.Name = "lvDetaylar";
             this.lvDetaylar.Size = new System.Drawing.Size(545, 160);
             this.lvDetaylar.TabIndex = 7;
             this.lvDetaylar.UseCompatibleStateImageBehavior = false;
             this.lvDetaylar.View = System.Windows.Forms.View.Details;
+            // 
+            // Modeller
+            // 
+            this.Modeller.Text = "Modeller";
+            this.Modeller.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Modeller.Width = 90;
             // 
             // İşlemci
             // 
@@ -83,12 +90,6 @@
             this.Fiyat.Text = "Fiyat";
             this.Fiyat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Fiyat.Width = 90;
-            // 
-            // Modeller
-            // 
-            this.Modeller.Text = "Modeller";
-            this.Modeller.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Modeller.Width = 90;
             // 
             // cbMarkalar
             // 
