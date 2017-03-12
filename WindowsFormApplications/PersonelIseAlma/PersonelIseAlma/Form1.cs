@@ -19,29 +19,45 @@ namespace PersonelIseAlma
 
         private void rbKadin_CheckedChanged(object sender, EventArgs e)
         {
-
+            //gbAskerlik.Visible = false;
+            gbAskerlik.Enabled = false;
         }
 
         private void rbErkek_CheckedChanged(object sender, EventArgs e)
         {
-            gbAskerlik.Visible = true;
+            //gbAskerlik.Visible = true;
+            gbAskerlik.Enabled = true;
         }
 
         private void btnBasvur_Click(object sender, EventArgs e)
         {
-            if (cbEgitim.SelectedItem.ToString() != "" && cbEgitim.SelectedItem.ToString() != "Lise")
+            int Yas = DateTime.Now.Year - dtpDogumTarihi.Value.Year;
+            if (txtAd.Text.Trim() != "" && txtSoyad.Text.Trim() != "" && txtTelefon.Text != "(   )    -  -")
             {
-
+                if (Yas < 20 || Yas > 35)
+                    MessageBox.Show("Yaş sebebi işe başvuru yapamazsınız!");
+                else if (cbEgitim.SelectedItem.ToString() == "Lise" || cbEgitim.SelectedItem.ToString() == "Doktora")
+                    MessageBox.Show("Eğitim durumu sebebiyle başvuru yapamazsınız!");
+                else if (cbxIngilizce.Checked != true)
+                    MessageBox.Show("Yabancı dil sebebiyle başvuru yapamazsınız!");
+                else if (cbxRusca.Checked != true && cbxArapca.Checked != true)
+                    MessageBox.Show("Yabancı dil sebebiyle başvuru yapamazsınız!");
+                else if (cbxYazilim.Checked != true || cbxMsOffice.Checked != true)
+                    MessageBox.Show("Bilgisayar bilgisi sebebiyle başvuru yapamasınız!");
+                else if (cbxVeritabani.Checked != true && cbxWebTasarim.Checked != true)
+                    MessageBox.Show("Bilgisayar bilgisi sebebiyle başvuru yapamazsınız!");
+                else if (rbErkek.Checked == true && rbYapilmadi.Checked == true)
+                    MessageBox.Show("Askerlik sebebiyle başvuru yapamazsınız!");
+                else
+                    MessageBox.Show("Sayın " + txtAd.Text + " " + txtSoyad.Text + " kriterleriniz uygundur, iş başvurunuz dikkate alınmıştır.");
             }
             else
-                MessageBox.Show("Eğitim durumu sebebiyle başvuru yapamazsınız!");
+                MessageBox.Show("İsim, soyad ve telefon bilgilerinizi giriniz!");
+        }
 
-            if (rbYapilmadi.Checked != true)
-            {
-
-            }
-            else
-                MessageBox.Show("Askerlik sebebi ile başvuru yapamazsınız!");
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cbEgitim.SelectedIndex = 0;
         }
     }
 }
