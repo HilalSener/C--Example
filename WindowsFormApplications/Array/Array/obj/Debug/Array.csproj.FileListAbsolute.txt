@@ -7,3 +7,4 @@ C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Array\Array\obj\De
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Array\Array\obj\Debug\Array.csproj.GenerateResource.Cache
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Array\Array\obj\Debug\Array.exe
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Array\Array\obj\Debug\Array.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Array\Array\obj\Debug\Array.Form2.resources
