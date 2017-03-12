@@ -88,6 +88,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\GalaxyNote5.png" />
+    <Content Include="images\GalaxyS7.png" />
+    <Content Include="images\GalaxyS7Edge.png" />
+    <Content Include="images\iphone6.png" />
+    <Content Include="images\iphone6s.png" />
+    <Content Include="images\iphone7.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
