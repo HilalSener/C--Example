@@ -7,3 +7,12 @@ C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Sozluk\Sozluk\obj\
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.csproj.GenerateResource.Cache
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.exe
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\bin\Debug\Sozluk.exe.config
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.exe
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\bin\Debug\Sozluk.exe
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\bin\Debug\Sozluk.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.csprojResolveAssemblyReference.cache
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.Form1.resources
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.Properties.Resources.resources
+C:\Github\CSharp-Example\WindowsFormApplications\Sozluk\Sozluk\obj\Debug\Sozluk.csproj.GenerateResource.Cache
