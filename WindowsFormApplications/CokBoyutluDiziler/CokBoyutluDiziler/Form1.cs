@@ -27,7 +27,18 @@ namespace CokBoyutluDiziler
             MessageBox.Show(Ogrenciler.Rank.ToString()); //Dizinin boyutunu verir. Yani tek boyutlu dizi -> 1
             MessageBox.Show(Notlar.Rank.ToString()); //Dizinin boyutunu verir. Yani tek boyutlu dizi -> 2
             MessageBox.Show(Notlar.GetLength(0).ToString()); //2 boyutlu dizinin satır sayısını verir.
-            MessageBox.Show(Notlar.GetLength(1).ToString());
+            MessageBox.Show(Notlar.GetLength(1).ToString()); //2 boyutlu dizinin sütun sayısını verir.
+
+            for (int i = 0; i <= Ogrenciler.Length - 1; i++)
+                lbOgrenciler.Items.Add(Ogrenciler[i]);
+
+            for(int j=0; j<=Notlar.GetLength(0) - 1; j++)
+            {
+                for (int k = 0; k <= Notlar.GetLength(1) - 1; k++)
+                {
+
+                }
+            }
         }
     }
 }
