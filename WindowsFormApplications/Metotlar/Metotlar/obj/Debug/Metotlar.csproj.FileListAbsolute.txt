@@ -8,3 +8,5 @@ C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Metotlar\Metotlar\
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Metotlar\Metotlar\obj\Debug\Metotlar.csproj.GenerateResource.Cache
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Metotlar\Metotlar\obj\Debug\Metotlar.exe
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Metotlar\Metotlar\obj\Debug\Metotlar.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Metotlar\Metotlar\obj\Debug\Metotlar.Form3.resources
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\Metotlar\Metotlar\obj\Debug\Metotlar.Form4.resources
