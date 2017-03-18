@@ -90,10 +90,12 @@
             // rbTrToIng
             // 
             this.rbTrToIng.AutoSize = true;
+            this.rbTrToIng.Checked = true;
             this.rbTrToIng.Location = new System.Drawing.Point(12, 28);
             this.rbTrToIng.Name = "rbTrToIng";
             this.rbTrToIng.Size = new System.Drawing.Size(106, 17);
             this.rbTrToIng.TabIndex = 4;
+            this.rbTrToIng.TabStop = true;
             this.rbTrToIng.Text = "Türkçe - İngilizce";
             this.rbTrToIng.UseVisualStyleBackColor = true;
             this.rbTrToIng.CheckedChanged += new System.EventHandler(this.rbTrToIng_CheckedChanged);

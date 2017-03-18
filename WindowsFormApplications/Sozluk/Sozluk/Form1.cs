@@ -22,7 +22,10 @@ namespace Sozluk
         string[] Ingilizceler = { "door", "window", "teacher", "student", "softwear", "hardware", "object", "class", "wall", "clock", "table", "pencil" };
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            for (int i = 0; i <= Turkceler.Length - 1; i++)
+            {
+                lbKelimeler.Items.Add(Turkceler[i]);
+            }
         }
 
         //Listbox a türkçe kelimeleri yazdır.
