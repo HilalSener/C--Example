@@ -56,36 +56,44 @@ namespace Sozluk
 
         private void lbKelimeler_DoubleClick(object sender, EventArgs e)
         {
-            if (Turkceler.Contains(lbKelimeler.SelectedItem.ToString()))
+            if(rbTrToIng.Checked)
                 txtTurkce.Text = lbKelimeler.SelectedItem.ToString();
-            else if (Ingilizceler.Contains(lbKelimeler.SelectedItem.ToString()))
+            else if(rbIngtToTr.Checked)
                 txtIngilizce.Text = lbKelimeler.SelectedItem.ToString();
+            //if (Turkceler.Contains(lbKelimeler.SelectedItem.ToString()))
+            //    txtTurkce.Text = lbKelimeler.SelectedItem.ToString();
+            //else if (Ingilizceler.Contains(lbKelimeler.SelectedItem.ToString()))
+            //    txtIngilizce.Text = lbKelimeler.SelectedItem.ToString();
         }
 
         private void rbTrToIng_CheckedChanged(object sender, EventArgs e)
         {
             lbKelimeler.Items.Clear();
-            txtIngilizce.Text = "";
-            txtCeviri.Text = "";
-            txtTurkce.Enabled = true;
-            txtIngilizce.Enabled = false;
+            txtIngilizce.Clear();
+            txtCeviri.Clear();
+            txtTurkce.ReadOnly = true;
+            txtIngilizce.ReadOnly = false;
+            txtTurkce.Focus();
             for (int i =0; i <= Turkceler.Length - 1; i++)
             {
                 lbKelimeler.Items.Add(Turkceler[i]);
             }
+            //lbKelimeler.Items.AddRange(Turkceler);
         }
 
         private void rbIngtToTr_CheckedChanged(object sender, EventArgs e)
         {
             lbKelimeler.Items.Clear();
-            txtTurkce.Text = "";
-            txtCeviri.Text = "";
-            txtIngilizce.Enabled = true;
-            txtTurkce.Enabled = false;
+            txtTurkce.Clear();
+            txtCeviri.Clear();
+            txtIngilizce.ReadOnly = true;
+            txtTurkce.ReadOnly = false;
+            txtIngilizce.Focus();
             for (int i = 0; i <= Ingilizceler.Length - 1; i++)
             {
                 lbKelimeler.Items.Add(Ingilizceler[i]);
             }
+            //lbKelimeler.Items.AddRange(Ingilizceler);
         }
     }
 }

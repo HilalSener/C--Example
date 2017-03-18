@@ -54,7 +54,6 @@
             // 
             this.txtTurkce.Location = new System.Drawing.Point(175, 104);
             this.txtTurkce.Name = "txtTurkce";
-            this.txtTurkce.ReadOnly = true;
             this.txtTurkce.Size = new System.Drawing.Size(126, 20);
             this.txtTurkce.TabIndex = 1;
             // 
@@ -72,7 +71,6 @@
             // 
             this.txtIngilizce.Location = new System.Drawing.Point(175, 137);
             this.txtIngilizce.Name = "txtIngilizce";
-            this.txtIngilizce.ReadOnly = true;
             this.txtIngilizce.Size = new System.Drawing.Size(126, 20);
             this.txtIngilizce.TabIndex = 2;
             // 
