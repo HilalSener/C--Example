@@ -36,7 +36,7 @@ namespace Sozluk
 
         private void btnBul_Click(object sender, EventArgs e)
         {
-            if(txtTurkce.Text != "")
+            if(txtTurkce.Text != "" && lbKelimeler.Items.Contains(txtTurkce.Text))
             {
                 for (int i = 0; i <= Turkceler.Length - 1; i++)
                 {
@@ -44,22 +44,28 @@ namespace Sozluk
                         txtCeviri.Text = Ingilizceler[i];
                 }
             }
-            else if (txtIngilizce.Text != "")
+            else if (txtIngilizce.Text != "" && lbKelimeler.Items.Contains(txtIngilizce.Text))
                 for (int i = 0; i <= Ingilizceler.Length - 1; i++)
                 {
                     if (Ingilizceler[i] == txtIngilizce.Text)
                         txtCeviri.Text = Turkceler[i];
                 }
             else 
-                MessageBox.Show("Bir kelime seçmelisiniz!");
+                MessageBox.Show("Aradığınız kelime sözlükte yok!");
         }
 
         private void lbKelimeler_DoubleClick(object sender, EventArgs e)
         {
             if(rbTrToIng.Checked)
+            {
                 txtTurkce.Text = lbKelimeler.SelectedItem.ToString();
+                txtIngilizce.Clear();
+            }
             else if(rbIngtToTr.Checked)
+            {
                 txtIngilizce.Text = lbKelimeler.SelectedItem.ToString();
+                txtTurkce.Clear();
+            }
             //if (Turkceler.Contains(lbKelimeler.SelectedItem.ToString()))
             //    txtTurkce.Text = lbKelimeler.SelectedItem.ToString();
             //else if (Ingilizceler.Contains(lbKelimeler.SelectedItem.ToString()))
@@ -71,8 +77,8 @@ namespace Sozluk
             lbKelimeler.Items.Clear();
             txtIngilizce.Clear();
             txtCeviri.Clear();
-            txtTurkce.ReadOnly = true;
-            txtIngilizce.ReadOnly = false;
+            txtTurkce.ReadOnly = false;
+            txtIngilizce.ReadOnly = true;
             txtTurkce.Focus();
             for (int i =0; i <= Turkceler.Length - 1; i++)
             {
@@ -86,8 +92,8 @@ namespace Sozluk
             lbKelimeler.Items.Clear();
             txtTurkce.Clear();
             txtCeviri.Clear();
-            txtIngilizce.ReadOnly = true;
-            txtTurkce.ReadOnly = false;
+            txtIngilizce.ReadOnly = false;
+            txtTurkce.ReadOnly = true;
             txtIngilizce.Focus();
             for (int i = 0; i <= Ingilizceler.Length - 1; i++)
             {
