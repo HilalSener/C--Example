@@ -7,3 +7,4 @@ C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\CokBoyutluDiziler\
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\CokBoyutluDiziler\CokBoyutluDiziler\obj\Debug\CokBoyutluDiziler.csproj.GenerateResource.Cache
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\CokBoyutluDiziler\CokBoyutluDiziler\obj\Debug\CokBoyutluDiziler.exe
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\CokBoyutluDiziler\CokBoyutluDiziler\obj\Debug\CokBoyutluDiziler.pdb
+C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\CokBoyutluDiziler\CokBoyutluDiziler\obj\Debug\CokBoyutluDiziler.Form2.resources

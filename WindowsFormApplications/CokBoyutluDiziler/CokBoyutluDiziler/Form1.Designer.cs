@@ -43,6 +43,7 @@
             this.lbOgrenciler.Name = "lbOgrenciler";
             this.lbOgrenciler.Size = new System.Drawing.Size(81, 160);
             this.lbOgrenciler.TabIndex = 0;
+            this.lbOgrenciler.SelectedIndexChanged += new System.EventHandler(this.lbOgrenciler_SelectedIndexChanged);
             // 
             // lbNot1
             // 
@@ -51,6 +52,7 @@
             this.lbNot1.Name = "lbNot1";
             this.lbNot1.Size = new System.Drawing.Size(44, 160);
             this.lbNot1.TabIndex = 0;
+            this.lbNot1.SelectedIndexChanged += new System.EventHandler(this.lbNot1_SelectedIndexChanged);
             // 
             // lbNot2
             // 
@@ -59,6 +61,7 @@
             this.lbNot2.Name = "lbNot2";
             this.lbNot2.Size = new System.Drawing.Size(44, 160);
             this.lbNot2.TabIndex = 0;
+            this.lbNot2.SelectedIndexChanged += new System.EventHandler(this.lbNot2_SelectedIndexChanged);
             // 
             // label1
             // 
