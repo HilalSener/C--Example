@@ -7,3 +7,12 @@ C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\EnBuyuk\EnBuyuk\ob
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.csproj.GenerateResource.Cache
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.exe
 C:\Users\Bireysel\Documents\HSS-Net13\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\bin\Debug\EnBuyuk.exe.config
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.exe
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\bin\Debug\EnBuyuk.exe
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\bin\Debug\EnBuyuk.pdb
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.csprojResolveAssemblyReference.cache
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.Form1.resources
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.Properties.Resources.resources
+C:\Github\CSharp-Example\WindowsFormApplications\EnBuyuk\EnBuyuk\obj\Debug\EnBuyuk.csproj.GenerateResource.Cache
