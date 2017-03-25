@@ -33,13 +33,21 @@ namespace BankApplication
 
             DosyaOluştur.Close();
 
+            string[] Degerler = new string[8];
             StreamReader DosyaOku = new StreamReader("HesapKartlari.txt");
             string okunan = DosyaOku.ReadLine();
             if (okunan == null)
                 lblHesapId.Text = "1";
             else
-                //lblHesapId.Text += 1;
-                while (true) ;
+                while (okunan != null)
+                {
+                    //string[] Degerler = okunan.Split(';');
+                    //lblHesapId.Text = (Convert.ToInt32(Degerler[0]) + 1).ToString();
+                    Degerler = okunan.Split(';');
+                    okunan = DosyaOku.ReadLine();
+                }
+            lblHesapId.Text = (Convert.ToInt32(Degerler[0]) + 1).ToString();
+            DosyaOku.Close();
         }
     }
 }
