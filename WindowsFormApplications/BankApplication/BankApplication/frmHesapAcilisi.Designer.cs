@@ -196,6 +196,7 @@
             this.btnHesapAc.TabIndex = 3;
             this.btnHesapAc.Text = "Hesap Aç";
             this.btnHesapAc.UseVisualStyleBackColor = false;
+            this.btnHesapAc.Click += new System.EventHandler(this.btnHesapAc_Click);
             // 
             // frmHesapAcilisi
             // 

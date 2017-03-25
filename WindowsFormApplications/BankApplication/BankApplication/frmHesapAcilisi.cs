@@ -18,6 +18,7 @@ namespace BankApplication
             InitializeComponent();
         }
 
+        Random rnd = new Random();
         private void frmHesapAcilisi_Load(object sender, EventArgs e)
         {
             this.Top = 60;
@@ -25,6 +26,28 @@ namespace BankApplication
             lblAcilisTarihi.Text = DateTime.Now.ToShortDateString(); //Kısa tarih
             cbHesapTurleri.SelectedIndex = 0;
             SonIDBul();
+            HesapNoOlustur();
+        }
+
+        private void HesapNoOlustur()
+        {
+            lblHesapNo.Text = "ACC" + rnd.Next(1000, 1003); //Ratgele 1000 - 9999 arasında bir sayı üretir.
+            StreamReader DosyaOku = new StreamReader("HesapKartlari.txt");
+            string okunan = DosyaOku.ReadLine();
+            if (okunan != null)
+            {
+                string[] Degerler = okunan.Split(';');
+                foreach (var deger in Degerler)
+                {
+                    if(deger == lblHesapNo.Text)
+                    {
+                        lblHesapNo.Text = "ACC" + rnd.Next(1000, 1003);
+                        DosyaOku.Close();
+                        //HesapNoOlustur(); //Kendini çağıran (recursive methods) metotlar
+                    }
+                    okunan = DosyaOku.ReadLine();
+                }
+            }
         }
 
         private void SonIDBul()
@@ -48,6 +71,11 @@ namespace BankApplication
                 }
             lblHesapId.Text = (Convert.ToInt32(Degerler[0]) + 1).ToString();
             DosyaOku.Close();
+        }
+
+        private void btnHesapAc_Click(object sender, EventArgs e)
+        {
+            //StreamWriter kullanılacak.
         }
     }
 }
