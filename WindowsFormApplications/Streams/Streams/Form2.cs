@@ -42,17 +42,24 @@ namespace Streams
         private void btnOku_Click(object sender, EventArgs e)
         {
             StreamReader DosyaOku = new StreamReader("Metin.txt");
-            rbtxtMetin.Text = DosyaOku.ReadLine(); //1 satır okur.
+            rbtxtMetin.Text = DosyaOku.ReadLine() + "\n"; //1 satır okur.
+            rbtxtMetin.Text += DosyaOku.ReadLine(); //2.Satırı getirir.
 
             DosyaOku.Close();
         }
 
         private void btnHepsiniOku_Click(object sender, EventArgs e)
         {
+            rbtxtMetin.Clear();
             StreamReader DosyaOku = new StreamReader("Metin.txt");
-            rbtxtMetin.Text = DosyaOku.ReadToEnd(); //Sona kadar hepsini okur.
+            //rbtxtMetin.Text = DosyaOku.ReadToEnd(); //Sona kadar hepsini okur.
             //ReadToEnd yerine ReadLine kullanmayı deneyelim. İpucu, "null" ile kontrol et!
-
+            string Okunan = DosyaOku.ReadLine();
+            while (Okunan != null)
+            {
+                rbtxtMetin.Text += Okunan + "\n";
+                Okunan = DosyaOku.ReadLine();
+            }
             DosyaOku.Close();
         }
     }
