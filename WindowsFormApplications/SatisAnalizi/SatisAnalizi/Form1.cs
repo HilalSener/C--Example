@@ -39,7 +39,17 @@ namespace SatisAnalizi
 
         private void lvSatislar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtFirma.Text = lvSatislar.SelectedItems.ToString();
+            if(lvSatislar.SelectedItems.Count > 0)
+            {
+                //txtFirma.Text = lvSatislar.SelectedItems[0].Text;
+                txtFirma.Text = lvSatislar.SelectedItems[0].SubItems[0].Text;
+                int Toplam = 0;
+                for (int i = 1; i <= Satislar.GetLength(1); i++)
+                {
+                    Toplam += Convert.ToInt32(lvSatislar.SelectedItems[0].SubItems[i].Text);
+                }
+                txtOrtalama.Text = (Toplam / Satislar.GetLength(1)).ToString();
+            }
         }
     }
 }

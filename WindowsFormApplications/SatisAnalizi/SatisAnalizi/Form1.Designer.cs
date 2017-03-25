@@ -33,12 +33,12 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFirma = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtOrtalama = new System.Windows.Forms.TextBox();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lvSatislar
@@ -84,6 +84,12 @@
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader4.Width = 93;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "4. Çeyrek";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader5.Width = 92;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -125,17 +131,11 @@
             this.txtOrtalama.Size = new System.Drawing.Size(100, 22);
             this.txtOrtalama.TabIndex = 3;
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "4. Çeyrek";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader5.Width = 92;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 438);
+            this.ClientSize = new System.Drawing.Size(819, 438);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtOrtalama);
             this.Controls.Add(this.txtFirma);
