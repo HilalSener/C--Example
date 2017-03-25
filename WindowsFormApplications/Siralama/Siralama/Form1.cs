@@ -28,6 +28,20 @@ namespace Siralama
             //Array.Sort(Sayilar); //Diziyi küçükten büyüğe sıralar.
             //Array.Reverse(Sayilar); //Dizi elemanlarını tersten sıralar
 
+            int Temp = 0;
+            for (int i = 0; i < Sayilar.Length; i++)
+            {
+                for (int j = i + 1; j < Sayilar.Length; j++)
+                {
+                    if (Sayilar[j] < Sayilar[i])
+                    {
+                        Temp = Sayilar[i];
+                        Sayilar[i] = Sayilar[j];
+                        Sayilar[j] = Temp;
+                    }
+                }
+            }
+
             foreach (var sayi in Sayilar)
             {
                 lbSirali.Items.Add(sayi);
