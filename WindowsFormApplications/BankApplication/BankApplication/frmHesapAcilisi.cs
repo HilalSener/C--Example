@@ -35,7 +35,7 @@ namespace BankApplication
 
         private bool HesapNoOlustur()
         {
-            lblHesapNo.Text = "ACC" + rnd.Next(1000, 1003); //Ratgele 1000 - 9999 arasında bir sayı üretir.
+            lblHesapNo.Text = "ACC" + rnd.Next(1000, 10000); //Ratgele 1000 - 9999 arasında bir sayı üretir.
             StreamReader DosyaOku = new StreamReader("HesapKartlari.txt");
             string okunan = DosyaOku.ReadLine();
             while (okunan != null)
@@ -78,7 +78,10 @@ namespace BankApplication
 
         private void btnHesapAc_Click(object sender, EventArgs e)
         {
-            //StreamWriter kullanılacak.
+            StreamWriter KartYaz = new StreamWriter("HesapKartlari.txt", true);
+            KartYaz.WriteLine(lblHesapId.Text + ";" + lblHesapNo.Text + ";" + lblAcilisTarihi.Text + ";" + txtAdi.Text + ";" + txtSoyadi.Text + ";" + txtTCKNo.Text + ";" + txtBakiye.Text + ";" + cbHesapTurleri.SelectedItem.ToString());
+
+            KartYaz.Close();
         }
     }
 }
