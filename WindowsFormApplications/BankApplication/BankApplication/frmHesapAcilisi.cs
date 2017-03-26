@@ -26,14 +26,19 @@ namespace BankApplication
             lblAcilisTarihi.Text = DateTime.Now.ToShortDateString(); //Kısa tarih
             cbHesapTurleri.SelectedIndex = 0;
             SonIDBul();
+            HesapNoOlustur();
+        }
+
+        private void HesapNoOlustur()
+        {
             bool Varmi = false;
             do
             {
-                Varmi = HesapNoOlustur();
+                Varmi = HesapKontrol();
             } while (Varmi);
         }
 
-        private bool HesapNoOlustur()
+        private bool HesapKontrol()
         {
             lblHesapNo.Text = "ACC" + rnd.Next(1000, 10000); //Ratgele 1000 - 9999 arasında bir sayı üretir.
             StreamReader DosyaOku = new StreamReader("HesapKartlari.txt");
@@ -46,9 +51,9 @@ namespace BankApplication
                         DosyaOku.Close();
                         return true;
                         //lblHesapNo.Text = "ACC" + rnd.Next(1000, 1003);
-                        //HesapNoOlustur(); //Kendini çağıran (recursive methods) metotlar
-                    }
-                    okunan = DosyaOku.ReadLine();
+                        //HesapKontrol(); //Kendini çağıran (recursive methods) metotlar
+                }
+                okunan = DosyaOku.ReadLine();
             }
             DosyaOku.Close();
             return false;
@@ -82,6 +87,24 @@ namespace BankApplication
             KartYaz.WriteLine(lblHesapId.Text + ";" + lblHesapNo.Text + ";" + lblAcilisTarihi.Text + ";" + txtAdi.Text + ";" + txtSoyadi.Text + ";" + txtTCKNo.Text + ";" + txtBakiye.Text + ";" + cbHesapTurleri.SelectedItem.ToString());
 
             KartYaz.Close();
+
+            StreamWriter HareketYaz = new StreamWriter("HesapHareketleri.txt", true);
+            HareketYaz.WriteLine(lblHesapId.Text + ";" + lblHesapNo.Text + ";" + lblAcilisTarihi.Text + ";" + txtBakiye.Text + ";" + "yatan");
+            HareketYaz.Close();
+
+            MessageBox.Show("Yeni hesap bilgileri kayıt edildi.");
+            Temizle();
+            SonIDBul();
+            HesapNoOlustur();
+        }
+
+        private void Temizle()
+        {
+            txtAdi.Clear();
+            txtSoyadi.Clear();
+            txtTCKNo.Clear();
+            txtBakiye.Clear();
+            txtAdi.Focus();
         }
     }
 }
