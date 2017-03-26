@@ -83,19 +83,28 @@ namespace BankApplication
 
         private void btnHesapAc_Click(object sender, EventArgs e)
         {
-            StreamWriter KartYaz = new StreamWriter("HesapKartlari.txt", true);
-            KartYaz.WriteLine(lblHesapId.Text + ";" + lblHesapNo.Text + ";" + lblAcilisTarihi.Text + ";" + txtAdi.Text + ";" + txtSoyadi.Text + ";" + txtTCKNo.Text + ";" + txtBakiye.Text + ";" + cbHesapTurleri.SelectedItem.ToString());
+            if (txtAdi.Text.Trim() != "" && txtSoyadi.Text.Trim() != "" && txtTCKNo.Text.Trim() != "")
+            {
+                StreamWriter KartYaz = new StreamWriter("HesapKartlari.txt", true);
+                KartYaz.WriteLine(lblHesapId.Text + ";" + lblHesapNo.Text + ";" + lblAcilisTarihi.Text + ";" + txtAdi.Text + ";" + txtSoyadi.Text + ";" + txtTCKNo.Text + ";" + txtBakiye.Text + ";" + cbHesapTurleri.SelectedItem.ToString());
 
-            KartYaz.Close();
+                KartYaz.Close();
 
-            StreamWriter HareketYaz = new StreamWriter("HesapHareketleri.txt", true);
-            HareketYaz.WriteLine(lblHesapId.Text + ";" + lblHesapNo.Text + ";" + lblAcilisTarihi.Text + ";" + txtBakiye.Text + ";" + "yatan");
-            HareketYaz.Close();
+                StreamWriter HareketYaz = new StreamWriter("HesapHareketleri.txt", true);
+                HareketYaz.WriteLine(lblHesapId.Text + ";" + lblHesapNo.Text + ";" + lblAcilisTarihi.Text + ";" + txtBakiye.Text + ";" + "yatan");
+                HareketYaz.Close();
 
-            MessageBox.Show("Yeni hesap bilgileri kayıt edildi.");
-            Temizle();
-            SonIDBul();
-            HesapNoOlustur();
+                MessageBox.Show("Yeni hesap bilgileri kayıt edildi.");
+                Temizle();
+                SonIDBul();
+                HesapNoOlustur();
+            }
+            else
+            {
+                MessageBox.Show("Müşteri Ad, Soyad ve TC Kimlik bilgileri eksiksiz girilmelidir!", "Dikkat! Eksik bilgi!");
+                txtAdi.Focus();
+            }
+                
         }
 
         private void Temizle()
