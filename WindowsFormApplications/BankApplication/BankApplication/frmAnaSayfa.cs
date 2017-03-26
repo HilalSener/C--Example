@@ -33,5 +33,11 @@ namespace BankApplication
         {
 
         }
+
+        private void mitmHesapDokumu_Click(object sender, EventArgs e)
+        {
+            frmHesapDokumu frm = new frmHesapDokumu();
+            frm.ShowDialog();
+        }
     }
 }

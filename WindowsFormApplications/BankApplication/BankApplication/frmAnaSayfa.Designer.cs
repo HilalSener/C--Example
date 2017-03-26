@@ -70,6 +70,7 @@
             this.mitmHesapDokumu.Name = "mitmHesapDokumu";
             this.mitmHesapDokumu.Size = new System.Drawing.Size(168, 22);
             this.mitmHesapDokumu.Text = "Hesap Dökümü";
+            this.mitmHesapDokumu.Click += new System.EventHandler(this.mitmHesapDokumu_Click);
             // 
             // mitmProgramdanCikis
             // 
@@ -85,7 +86,7 @@
             this.ClientSize = new System.Drawing.Size(386, 333);
             this.Controls.Add(this.mnuAnaSayfa);
             this.MainMenuStrip = this.mnuAnaSayfa;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAnaSayfa";
             this.Text = "BankApplication Anasayfa İşlemleri";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
