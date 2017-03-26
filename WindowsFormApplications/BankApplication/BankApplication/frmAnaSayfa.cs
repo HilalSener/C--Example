@@ -28,5 +28,10 @@ namespace BankApplication
             frmHesapAcilisi frm = new frmHesapAcilisi();
             frm.ShowDialog(); // Açık fork kapatılmadan diğerinin açılması izin vermez.
         }
+
+        private void frmAnaSayfa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

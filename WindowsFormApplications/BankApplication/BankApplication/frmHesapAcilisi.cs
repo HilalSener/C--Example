@@ -26,35 +26,38 @@ namespace BankApplication
             lblAcilisTarihi.Text = DateTime.Now.ToShortDateString(); //Kısa tarih
             cbHesapTurleri.SelectedIndex = 0;
             SonIDBul();
-            HesapNoOlustur();
+            bool Varmi = false;
+            do
+            {
+                Varmi = HesapNoOlustur();
+            } while (Varmi);
         }
 
-        private void HesapNoOlustur()
+        private bool HesapNoOlustur()
         {
             lblHesapNo.Text = "ACC" + rnd.Next(1000, 1003); //Ratgele 1000 - 9999 arasında bir sayı üretir.
             StreamReader DosyaOku = new StreamReader("HesapKartlari.txt");
             string okunan = DosyaOku.ReadLine();
-            if (okunan != null)
+            while (okunan != null)
             {
                 string[] Degerler = okunan.Split(';');
-                foreach (var deger in Degerler)
-                {
-                    if(deger == lblHesapNo.Text)
+                if(lblHesapNo.Text == Degerler[1])
                     {
-                        lblHesapNo.Text = "ACC" + rnd.Next(1000, 1003);
                         DosyaOku.Close();
+                        return true;
+                        //lblHesapNo.Text = "ACC" + rnd.Next(1000, 1003);
                         //HesapNoOlustur(); //Kendini çağıran (recursive methods) metotlar
                     }
                     okunan = DosyaOku.ReadLine();
-                }
             }
+            DosyaOku.Close();
+            return false;
         }
 
         private void SonIDBul()
         {
-            StreamWriter DosyaOluştur = new StreamWriter("HesapKartlari.txt", true);
-
-            DosyaOluştur.Close();
+            StreamWriter DosyaOlustur = new StreamWriter("HesapKartlari.txt", true);
+            DosyaOlustur.Close();
 
             string[] Degerler = new string[8];
             StreamReader DosyaOku = new StreamReader("HesapKartlari.txt");
