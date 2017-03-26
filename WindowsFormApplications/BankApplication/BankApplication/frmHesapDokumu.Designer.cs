@@ -293,6 +293,7 @@
             this.btnParaIslemleri.TabIndex = 3;
             this.btnParaIslemleri.Text = "Para İşlemleri";
             this.btnParaIslemleri.UseVisualStyleBackColor = false;
+            this.btnParaIslemleri.Click += new System.EventHandler(this.btnParaIslemleri_Click);
             // 
             // btnYazici
             // 

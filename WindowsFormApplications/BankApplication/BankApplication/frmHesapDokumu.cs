@@ -13,6 +13,9 @@ namespace BankApplication
 {
     public partial class frmHesapDokumu : Form
     {
+        public static string HesapNo;
+        public static string HesapId;
+
         public frmHesapDokumu()
         {
             InitializeComponent();
@@ -98,6 +101,20 @@ namespace BankApplication
             txtToplamYatan.Text = ToplamYatan.ToString();
             txtToplamCekilen.Text = ToplamCekilen.ToString();
             txtBakiye.Text = (ToplamYatan - ToplamCekilen).ToString();
+        }
+
+        private void btnParaIslemleri_Click(object sender, EventArgs e)
+        {
+            frmParaIslemleri frm = new frmParaIslemleri();
+            //frm.lblHesapId.Text = lvHareketler.Items[0].SubItems[0].Text;
+            //frm.lblHesapNo.Text = lvHareketler.Items[0].SubItems[1].Text;
+            //HesapId = lvHareketler.Items[0].SubItems[0].Text;
+            //HesapNo = lvHareketler.Items[0].SubItems[1].Text;
+
+            frm.HesapBilgileriAl(lvHareketler.Items[0].SubItems[0].Text, txtHesapNo.Text);
+            frm.ShowDialog();
+            HesapHareketleriGoster();
+            ToplamlariGoster();
         }
     }
 }

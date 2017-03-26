@@ -45,6 +45,7 @@
             this.cbHesapTurleri = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnHesapAc = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -266,5 +267,6 @@
         private System.Windows.Forms.ComboBox cbHesapTurleri;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnHesapAc;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
