@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,9 @@ namespace BankApplication
     {
         public static string HesapNo;
         public static string HesapId;
-
+        Font fntBaslik = new Font("Times New Roman", 16, FontStyle.Bold);
+        Font fntDetay = new Font("Times New Roman", 12, FontStyle.Regular);
+        SolidBrush sb = new SolidBrush(Color.Black);
         public frmHesapDokumu()
         {
             InitializeComponent();
@@ -115,6 +118,17 @@ namespace BankApplication
             frm.ShowDialog();
             HesapHareketleriGoster();
             ToplamlariGoster();
+        }
+
+        private void btnYazici_Click(object sender, EventArgs e)
+        {
+            ppdHareketler.ShowDialog();
+        }
+
+        private void pdocHareketler_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Hesap Hareketleri", fntBaslik, sb, 320, 150);
+
         }
     }
 }
