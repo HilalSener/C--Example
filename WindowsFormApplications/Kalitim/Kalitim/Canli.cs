@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kalitim
 {
-    class Canli
+    abstract class Canli
     {
         string _solunum;
         string _beslenme;
