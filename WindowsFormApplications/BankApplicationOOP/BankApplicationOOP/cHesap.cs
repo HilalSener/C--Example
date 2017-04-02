@@ -1,0 +1,189 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BankApplicationOOP
+{
+    public class cHesap
+    {
+        private int _id;
+        private string _hesapNo;
+        private string _AcilisTarihi;
+        private string _ad;
+        private string _soyad;
+        private string _tckno;
+        private double _bakiye;
+        private string _hesapTuru;
+
+        #region Properties
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+
+            set
+            {
+                _id = value;
+            }
+        }
+
+        public string HesapNo
+        {
+            get
+            {
+                return _hesapNo;
+            }
+
+            set
+            {
+                _hesapNo = value;
+            }
+        }
+
+        public string AcilisTarihi
+        {
+            get
+            {
+                return _AcilisTarihi;
+            }
+
+            set
+            {
+                _AcilisTarihi = value;
+            }
+        }
+
+        public string Ad
+        {
+            get
+            {
+                return _ad;
+            }
+
+            set
+            {
+                _ad = value;
+            }
+        }
+
+        public string Soyad
+        {
+            get
+            {
+                return _soyad;
+            }
+
+            set
+            {
+                _soyad = value;
+            }
+        }
+
+        public string Tckno
+        {
+            get
+            {
+                return _tckno;
+            }
+
+            set
+            {
+                _tckno = value;
+            }
+        }
+
+        public double Bakiye
+        {
+            get
+            {
+                return _bakiye;
+            }
+
+            set
+            {
+                _bakiye = value;
+            }
+        }
+
+        public string HesapTuru
+        {
+            get
+            {
+                return _hesapTuru;
+            }
+
+            set
+            {
+                _hesapTuru = value;
+            }
+        }
+        #endregion
+
+        public int SonIDBul()
+        {
+            StreamWriter DosyaOlustur = new StreamWriter("HesapKartlari.txt", true);
+            DosyaOlustur.Close();
+
+            int ID;
+            string[] Degerler = new string[8];
+            StreamReader DosyaOku = new StreamReader("HesapKartlari.txt");
+            string okunan = DosyaOku.ReadLine();
+            if (okunan == null)
+                ID= 1;
+            else
+                while (okunan != null)
+                {
+                    Degerler = okunan.Split(';');
+                    okunan = DosyaOku.ReadLine();
+                }
+            ID = Convert.ToInt32(Degerler[0]) + 1;
+            DosyaOku.Close();
+            return ID;
+        }
+
+        Random rnd = new Random();
+        string YeniHesapNo;
+        public string HesapNoOlustur()
+        {
+            bool Varmi = false;
+            do
+            {
+                Varmi = HesapKontrol();
+            } while (Varmi);
+            return YeniHesapNo;
+        }
+
+        public bool HesapKontrol()
+        {
+            YeniHesapNo = "ACC" + rnd.Next(1000, 10000); //Ratgele 1000 - 9999 arasında bir sayı üretir.
+            StreamReader DosyaOku = new StreamReader("HesapKartlari.txt");
+            string okunan = DosyaOku.ReadLine();
+            while (okunan != null)
+            {
+                string[] Degerler = okunan.Split(';');
+                if (YeniHesapNo == Degerler[1])
+                {
+                    DosyaOku.Close();
+                    return true;
+                }
+                okunan = DosyaOku.ReadLine();
+            }
+            DosyaOku.Close();
+            return false;
+        }
+
+       public bool YeniHesapAc(int Id, string No, string Tarih, string Adi, string Soyadi, string TCKNo, Double Bakiye, string HesapTuru)
+       {
+           StreamWriter KartYaz = new StreamWriter("HesapKartlari.txt", true);
+           KartYaz.WriteLine(Id + ";" + No + ";" + Tarih + ";" +  Adi + ";" + Soyadi + ";" + TCKNo + ";" + Bakiye + ";" + HesapTuru);
+
+           KartYaz.Close();
+            return true;
+       }
+    }
+}
