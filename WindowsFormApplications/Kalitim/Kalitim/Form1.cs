@@ -27,9 +27,11 @@ namespace Kalitim
 
             Hayvan h = new Hayvan();
             h.Hareket = "Koşar";
+            MessageBox.Show(h.YeniDogan(), "Hayvan");
 
             Insan ins = new Insan();
-            ins.Düsünme = "Ara sıra";
+            ins.Düsünme = "Ara sıra";  //miras alınan sınıftaki metot farklı sonuç üretiyor (çok biçimlilik - polymorphism)
+            MessageBox.Show(ins.YeniDogan(), "Insan");
 
             //Kisi k = new Kisi();  Sealed(Mühürlenmiş) class lar new ile çoğaltılıp kullanılabilir, ancak miras alınamazlar.
             //k.Ad = "Sema";

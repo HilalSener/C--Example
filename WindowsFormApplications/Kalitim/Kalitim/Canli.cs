@@ -64,7 +64,11 @@ namespace Kalitim
             {
                 _ureme = value;
             }
-        } 
+        }
         #endregion
+
+        public abstract void Beslen();
+        //Abstract metotlar, abstract class lar içinde tanımlanabilir. Miras alan sınıflar tarafından mutlaka override edilip kullanılmalıdır. Abstract metotlar otomatik olarak virtual kabul edilirler.
+        public abstract void SuIc();
     }
 }

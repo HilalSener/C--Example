@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kalitim
 {
-    class Insan : Hayvan
+    sealed class Insan : Hayvan
     {
         string _düsünme;
 
@@ -21,6 +21,11 @@ namespace Kalitim
             {
                 _düsünme = value;
             }
+        }
+
+        public override string YeniDogan()
+        {
+            return "bebek";
         }
     }
 }

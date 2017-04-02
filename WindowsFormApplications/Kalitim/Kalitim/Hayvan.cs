@@ -22,5 +22,20 @@ namespace Kalitim
                 _hareket = value;
             }
         }
+
+        public override void Beslen()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SuIc()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual string YeniDogan()  //Virtual metotlar miras alan sonoflar tarafından değiştirilerek(override) kullanılabilirler.
+        {
+            return "civciv";
+        }
     }
 }

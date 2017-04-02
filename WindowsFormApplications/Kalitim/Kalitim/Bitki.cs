@@ -21,6 +21,16 @@ namespace Kalitim
             {
                 _fotosentez = value;
             }
-        }        
+        }
+
+        public override void Beslen()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SuIc()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
