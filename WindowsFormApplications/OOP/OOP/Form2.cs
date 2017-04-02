@@ -27,5 +27,11 @@ namespace OOP
             cTelefon tel = new cTelefon();
             MessageBox.Show(tel.AramaYap(txtTelefon.Text));
         }
+
+        private void btnMesajGonder_Click(object sender, EventArgs e)
+        {
+            cTelefon tel2 = new cTelefon();
+            MessageBox.Show(tel2.MesajGonder(txtTelefon.Text, txtMesaj.Text));
+        }
     }
 }

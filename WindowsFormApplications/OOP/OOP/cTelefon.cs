@@ -117,6 +117,11 @@ namespace OOP
             return TelNo + " numaralı telefon aranıyor...";
         }
 
+        public string MesajGonder(string TelNo, string Mesaj)
+        {
+            return TelNo + " numaralı telefona " +  Mesaj +  " gönderiliyor...";
+        }
+
         public cTelefon() { } //cTelefonda başlangıçta bir parametre atanmasa da çalış komutu. Default Constructor, kendi constructor ımızı yazınca iptal olur. Bunun için elle tekrar yazdık.
 
         public cTelefon(string Markasi, string Modeli)
