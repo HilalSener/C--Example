@@ -24,6 +24,14 @@ namespace OOP
             tel1.Model = "Galaxy S7";
             tel1.Fiyat = 3000;
             MessageBox.Show(tel1.Marka + ","  + tel1.Model + " Fiyatı :" + tel1.Fiyat);
+
+            cTelefon tel2 = new cTelefon();
+            tel2.Marka = "aPPLE";
+            MessageBox.Show("Markası :" + tel2.Marka);
+
+            cTelefon tel3 = new cTelefon("Nokia", "Lumia 1320");
+            tel3.Fiyat = 1800;
+            MessageBox.Show(tel3.Marka + ", " + tel3.Model + " Fiyatı : " + tel3.Fiyat);
         }
     }
 

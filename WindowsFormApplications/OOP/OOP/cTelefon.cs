@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OOP
 {
@@ -111,6 +112,25 @@ namespace OOP
         }
         #endregion
 
+        public string AramaYap(string TelNo)
+        {
+            return TelNo + " numaralı telefon aranıyor...";
+        }
 
+        public cTelefon() { } //cTelefonda başlangıçta bir parametre atanmasa da çalış komutu. Default Constructor, kendi constructor ımızı yazınca iptal olur. Bunun için elle tekrar yazdık.
+
+        public cTelefon(string Markasi, string Modeli)
+        {
+            _marka = Markasi;
+            _model = Modeli;
+        }
+
+        //Her class ın bir adet yıkıcı metodu yani (Destructor) vardır.
+        /*
+        ~cTelefon()
+        {
+            MessageBox.Show("cTelefon nesnesi hafızadan atılıyor...");
+        }
+        */
     }
 }
