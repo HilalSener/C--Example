@@ -33,7 +33,7 @@ namespace Kalitim
             throw new NotImplementedException();
         }
 
-        public virtual string YeniDogan()  //Virtual metotlar miras alan sonoflar tarafından değiştirilerek(override) kullanılabilirler.
+        public virtual string YeniDogan()  //Virtual metotlar miras alan sınıflar tarafından değiştirilerek(override) kullanılabilirler.
         {
             return "civciv";
         }
