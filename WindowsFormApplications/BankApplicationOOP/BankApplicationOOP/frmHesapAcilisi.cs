@@ -34,17 +34,33 @@ namespace BankApplicationOOP
             if (txtAdi.Text.Trim() != "" && txtSoyadi.Text.Trim() != "" && txtTCKNo.Text.Trim() != "")
             {
                 cHesap h = new cHesap();
-                h.YeniHesapAc(Convert.ToInt32(lblHesapId.Text), lblHesapNo.Text, lblAcilisTarihi.Text, txtAdi.Text, txtSoyadi.Text, txtTCKNo.Text, Convert.ToDouble(txtBakiye.Text), cbHesapTurleri.SelectedItem.ToString());
+                h.Id = Convert.ToInt32(lblHesapId.Text);
+                h.HesapNo = lblHesapNo.Text;
+                h.AcilisTarihi = lblAcilisTarihi.Text;
+                h.Ad = txtAdi.Text;
+                h.Soyad = txtSoyadi.Text;
+                h.Tckno = txtTCKNo.Text;
+                h.Bakiye = Convert.ToDouble(txtBakiye.Text);
+                h.HesapTuru = cbHesapTurleri.SelectedItem.ToString();
+                bool Sonuc = h.YeniHesapAc(h); 
+                //bool Sonuc = h.YeniHesapAc(Convert.ToInt32(lblHesapId.Text), lblHesapNo.Text, lblAcilisTarihi.Text, txtAdi.Text, txtSoyadi.Text, txtTCKNo.Text, Convert.ToDouble(txtBakiye.Text), cbHesapTurleri.SelectedItem.ToString());
 
-                //StreamWriter HareketYaz = new StreamWriter("HesapHareketleri.txt", true);
-                //HareketYaz.WriteLine(lblHesapId.Text + ";" + lblHesapNo.Text + ";" + lblAcilisTarihi.Text + ";" + txtBakiye.Text + ";" + "yatan");
-                //HareketYaz.Close();
+                if(Sonuc)
+                {
+                    cHesapHareketi hh = new cHesapHareketi();
+                    hh.Id = Convert.ToInt32(lblHesapId.Text);
+                    hh.HesapNo = lblHesapNo.Text;
+                    hh.Tarih = lblAcilisTarihi.Text;
+                    hh.Tutar = Convert.ToDouble(txtBakiye.Text);
+                    hh.IslemTuru = "yatan";
+                    Sonuc = hh.HesapHareketEkle(hh);
+                    //Sonuc = hh.HesapHareketEkle(Convert.ToInt32(lblHesapId.Text), lblHesapNo.Text, lblAcilisTarihi.Text, Convert.ToDouble(txtBakiye.Text), "yatan");
+                }
 
                 MessageBox.Show("Yeni hesap bilgileri kayıt edildi.");
                 Temizle();
-                cHesap hesap = new cHesap();
-                hesap.SonIDBul();
-                hesap.HesapNoOlustur();
+                lblHesapId.Text = h.SonIDBul().ToString();
+                lblHesapNo.Text = h.HesapNoOlustur();
             }
             else
             {
