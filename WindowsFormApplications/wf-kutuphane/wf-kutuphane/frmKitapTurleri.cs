@@ -41,7 +41,10 @@ namespace wf_kutuphane
                     if (kt.KitapTuruEkle(kt))
                     {
                         MessageBox.Show("Kitap Türü Eklendi.");
-
+                        txtKitapTuru.Clear();
+                        txtID.Text = kt.SonIDBul().ToString();
+                        kt.KitapTurleriGoster(lbKitapTurleri);
+                        txtKitapTuru.Focus();
                     }
                 }
             }
