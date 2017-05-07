@@ -8,6 +8,6 @@ namespace VideoMarket
 {
     public class cGenel
     {
-        public static string connStr = "Data Source=DESKTOP-MTC28NR; Intial Cataşpg=VideoMarket; uid=sa; pwd=1234;";
+        public static string connStr = "Data Source=DESKTOP-MTC28NR; Initial Catalog=VideoMarket; uid=sa; pwd=1234;";
     }
 }

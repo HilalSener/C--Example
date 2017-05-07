@@ -31,7 +31,7 @@ namespace VideoMarket
         {
             frmFilmTurleri frm = new frmFilmTurleri();
             frm.MdiParent = this;
-            frm.Show();
+            frm.Show(); 
         }
     }
 }
