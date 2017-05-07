@@ -107,12 +107,97 @@ namespace VideoMarket
             return VarMi;
         }
 
+        public bool FilmTuruKontrol(string FilmTuru, int TurNo)
+        {
+            bool VarMi = false;
+            SqlCommand comm = new SqlCommand("select * from FilmTurleri where TurAd = @TurAd and FilmTurNo != @TurNo and Silindi = 0", conn);
+            comm.Parameters.Add("@TurAd", SqlDbType.VarChar).Value = FilmTuru;
+            comm.Parameters.Add("@TurNo", SqlDbType.Int).Value = TurNo;
+            if (conn.State == System.Data.ConnectionState.Closed) conn.Open();
+            SqlDataReader dr;
+            try
+            {
+                dr = comm.ExecuteReader();
+                while (dr.Read())
+                {
+                    VarMi = true;
+                }
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+
+            return VarMi;
+        }
+
+        public bool FilmTuruGuncelle(cFilmTuru ft)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("update FilmTurleri set TurAd=@TurAd, Aciklama=@Aciklama where FilmTurNo=@TurNo", conn);
+            comm.Parameters.Add("@TurAd", SqlDbType.VarChar).Value = ft._turAd;
+            comm.Parameters.Add("@Aciklama", SqlDbType.VarChar).Value = ft._aciklama;
+            comm.Parameters.Add("@TurNo", SqlDbType.Int).Value = ft._filmTurNo;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());   //insert, update ve delete de kullanılır. 
+            }
+            catch (SqlException ex)
+            {
+
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+            return Sonuc;
+        }
+
         public bool FilmTuruEkle(string FilmTuru, string Aciklama)
         {
             bool Sonuc = false;
             SqlCommand comm = new SqlCommand("insert into FilmTurleri (TurAd, Aciklama) values(@TurAd, @Aciklama)", conn);
             comm.Parameters.Add("@TurAd", SqlDbType.VarChar).Value = FilmTuru;
             comm.Parameters.Add("@Aciklama", SqlDbType.VarChar).Value = Aciklama;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());   //insert, update ve delete de kullanılır. 
+            }
+            catch (SqlException ex)
+            {
+
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+            return Sonuc;
+        }
+
+        public bool FilmTuruEkle(cFilmTuru ft)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("insert into FilmTurleri (TurAd, Aciklama) values(@TurAd, @Aciklama)", conn);
+            comm.Parameters.Add("@TurAd", SqlDbType.VarChar).Value = ft._turAd;
+            comm.Parameters.Add("@Aciklama", SqlDbType.VarChar).Value = ft._aciklama;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());   //insert, update ve delete de kullanılır. 
+            }
+            catch (SqlException ex)
+            {
+
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+            return Sonuc;
+        }
+
+        public bool FilmTuruSil(int TurNo)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("update FilmTurleri set Silindi = 1 where FilmTurNo=@TurNo", conn);
+            comm.Parameters.Add("@TurNo", SqlDbType.Int).Value = TurNo;
             if (conn.State == ConnectionState.Closed) conn.Open();
             try
             {

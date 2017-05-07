@@ -40,6 +40,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtTurNo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +56,7 @@
             // 
             this.txtFilmTuru.Location = new System.Drawing.Point(183, 53);
             this.txtFilmTuru.Name = "txtFilmTuru";
-            this.txtFilmTuru.Size = new System.Drawing.Size(230, 22);
+            this.txtFilmTuru.Size = new System.Drawing.Size(245, 22);
             this.txtFilmTuru.TabIndex = 1;
             // 
             // label2
@@ -72,7 +73,7 @@
             this.txtAciklama.Location = new System.Drawing.Point(183, 90);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(230, 116);
+            this.txtAciklama.Size = new System.Drawing.Size(245, 116);
             this.txtAciklama.TabIndex = 2;
             // 
             // btnYeni
@@ -88,7 +89,7 @@
             // btnKaydet
             // 
             this.btnKaydet.Enabled = false;
-            this.btnKaydet.Location = new System.Drawing.Point(166, 241);
+            this.btnKaydet.Location = new System.Drawing.Point(170, 241);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(75, 23);
             this.btnKaydet.TabIndex = 4;
@@ -99,22 +100,24 @@
             // btnDegistir
             // 
             this.btnDegistir.Enabled = false;
-            this.btnDegistir.Location = new System.Drawing.Point(253, 241);
+            this.btnDegistir.Location = new System.Drawing.Point(261, 242);
             this.btnDegistir.Name = "btnDegistir";
             this.btnDegistir.Size = new System.Drawing.Size(75, 23);
             this.btnDegistir.TabIndex = 5;
             this.btnDegistir.Text = "Değiştir";
             this.btnDegistir.UseVisualStyleBackColor = true;
+            this.btnDegistir.Click += new System.EventHandler(this.btnDegistir_Click);
             // 
             // btnSil
             // 
             this.btnSil.Enabled = false;
-            this.btnSil.Location = new System.Drawing.Point(338, 241);
+            this.btnSil.Location = new System.Drawing.Point(350, 241);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(75, 23);
             this.btnSil.TabIndex = 6;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // lvFilmTurleri
             // 
@@ -125,10 +128,11 @@
             this.lvFilmTurleri.FullRowSelect = true;
             this.lvFilmTurleri.Location = new System.Drawing.Point(79, 292);
             this.lvFilmTurleri.Name = "lvFilmTurleri";
-            this.lvFilmTurleri.Size = new System.Drawing.Size(334, 278);
+            this.lvFilmTurleri.Size = new System.Drawing.Size(349, 278);
             this.lvFilmTurleri.TabIndex = 7;
             this.lvFilmTurleri.UseCompatibleStateImageBehavior = false;
             this.lvFilmTurleri.View = System.Windows.Forms.View.Details;
+            this.lvFilmTurleri.DoubleClick += new System.EventHandler(this.lvFilmTurleri_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -144,12 +148,21 @@
             this.columnHeader3.Text = "Açıklama";
             this.columnHeader3.Width = 150;
             // 
+            // txtTurNo
+            // 
+            this.txtTurNo.Location = new System.Drawing.Point(34, 13);
+            this.txtTurNo.Name = "txtTurNo";
+            this.txtTurNo.ReadOnly = true;
+            this.txtTurNo.Size = new System.Drawing.Size(62, 22);
+            this.txtTurNo.TabIndex = 8;
+            // 
             // frmFilmTurleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(525, 679);
+            this.Controls.Add(this.txtTurNo);
             this.Controls.Add(this.lvFilmTurleri);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnDegistir);
@@ -181,5 +194,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.TextBox txtTurNo;
     }
 }

@@ -70,5 +70,73 @@ namespace VideoMarket
                 MessageBox.Show("Film Türü Girmelisiniz!", "Dikkat! Eksik Bilgi!");
             }
         }
+
+        private void lvFilmTurleri_DoubleClick(object sender, EventArgs e)
+        {
+            txtTurNo.Text = lvFilmTurleri.SelectedItems[0].SubItems[0].Text;
+            txtFilmTuru.Text = lvFilmTurleri.SelectedItems[0].SubItems[1].Text;
+            txtAciklama.Text = lvFilmTurleri.SelectedItems[0].SubItems[2].Text;
+            btnDegistir.Enabled = true;
+            btnSil.Enabled = true;
+            btnKaydet.Enabled = false;
+        }
+
+        private void btnDegistir_Click(object sender, EventArgs e)
+        {
+            if (txtFilmTuru.Text.Trim() != "")
+            {
+                cFilmTuru ft = new cFilmTuru();
+                if (ft.FilmTuruKontrol(txtFilmTuru.Text, Convert.ToInt32(txtTurNo.Text)))
+                {
+                    MessageBox.Show("Bu film türü zaten kayıtlı!", "Önceden kayıt edilmiş!");
+                    txtFilmTuru.Focus();
+                }
+                else
+                {
+                    ft.TurAd = txtFilmTuru.Text;
+                    ft.Aciklama = txtAciklama.Text;
+                    ft.FilmTurNo = Convert.ToInt32(txtTurNo.Text);
+                    bool Sonuc = ft.FilmTuruGuncelle(ft);
+                    if (Sonuc)
+                    {
+                        MessageBox.Show("Film türü bilgileri değiştirildi.", "Güncelleme yapıldı!");
+                        Temizle();
+                        btnKaydet.Enabled = false;
+                        btnSil.Enabled = false;
+                        ft.FilmTurleriGoster(lvFilmTurleri);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Değişiklik yapılamadı", "Dikkat! Başarısız kayıt!");
+                        txtFilmTuru.Focus();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Film Türü Girmelisiniz!", "Dikkat! Eksik Bilgi!");
+            }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Silmek istiyor musunuz?", "Emin misini?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cFilmTuru ft = new cFilmTuru();
+                if (ft.FilmTuruSil(Convert.ToInt32(txtTurNo.Text)))
+                {
+                    MessageBox.Show("Film türü bilgileri silindi.", "Silme yapıldı!");
+                    Temizle();
+                    btnKaydet.Enabled = false;
+                    btnSil.Enabled = false;
+                    ft.FilmTurleriGoster(lvFilmTurleri);
+                }
+                else
+                {
+                    MessageBox.Show("Silme gerçekleşmedi", "Dikkat, sorun var!");
+                    txtFilmTuru.Focus();
+                }
+            }
+        }
     }
 }
