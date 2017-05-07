@@ -101,9 +101,12 @@ namespace BankApplication
                 else 
                     ToplamCekilen += Convert.ToDouble(lvHareketler.Items[i].SubItems[3].Text);
             }
-            txtToplamYatan.Text = ToplamYatan.ToString();
-            txtToplamCekilen.Text = ToplamCekilen.ToString();
-            txtBakiye.Text = (ToplamYatan - ToplamCekilen).ToString();
+            //txtToplamYatan.Text = ToplamYatan.ToString();
+            //txtToplamCekilen.Text = ToplamCekilen.ToString();
+            //txtBakiye.Text = (ToplamYatan - ToplamCekilen).ToString();
+            txtToplamYatan.Text = string.Format("{0:C}", ToplamYatan);
+            txtToplamCekilen.Text = string.Format("{0:C}", ToplamCekilen);
+            txtBakiye.Text = string.Format("{0:C}", (ToplamYatan - ToplamCekilen));
         }
 
         private void btnParaIslemleri_Click(object sender, EventArgs e)
@@ -133,38 +136,41 @@ namespace BankApplication
             e.Graphics.DrawString("Hesap Hareketleri", fntBaslik, sb, 320, 150);
             e.Graphics.DrawString("    ID     HesapNo     İşlemTarihi     İşlemTutarı     İşlemTürü   ", fntBaslik, sb, 100, 200);
             e.Graphics.DrawString("____________________________________________________", fntBaslik, sb, 100, 210);
+            int y = 0;
             for (int i = k; i < lvHareketler.Items.Count; i++)
             {
-                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[0].Text, fntDetay, sb, 105, 250 + i * 30, fmt);
-                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[1].Text, fntDetay, sb, 180, 250 + i * 30, fmt);
-                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[2].Text, fntDetay, sb, 310, 250 + i * 30, fmt);
-                fmt.Alignment = StringAlignment.Far;
-                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[3].Text, fntDetay, sb, 505, 250 + i * 30, fmt);
-                fmt.Alignment = StringAlignment.Near;
-                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[4].Text, fntDetay, sb, 605, 250 + i * 30, fmt);
-                if (k == 25 && k % 25 <= 25)
+                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[0].Text, fntDetay, sb, 105, 250 + y * 30, fmt);
+                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[1].Text, fntDetay, sb, 180, 250 + y * 30, fmt);
+                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[2].Text, fntDetay, sb, 310, 250 + y * 30, fmt);
+                fmt.Alignment = StringAlignment.Far;                                                   
+                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[3].Text, fntDetay, sb, 505, 250 + y * 30, fmt);
+                fmt.Alignment = StringAlignment.Near;                                                  
+                e.Graphics.DrawString(lvHareketler.Items[i].SubItems[4].Text, fntDetay, sb, 605, 250 + y * 30, fmt);
+                k++;
+                y++;
+                if (i > 0 && i % 25 <= 0)
                 {
                     e.HasMorePages = true;
-                    continue;
+                    return;
                 }
                 else
                 {
                     e.HasMorePages = false;
-                    k++;
                 }
             }
-            e.Graphics.DrawString("____________________________________________________", fntBaslik, sb, 100, 230 + lvHareketler.Items.Count * 30);
-            e.Graphics.DrawString("Toplam Yatan", fntDetay, sb, 310, 270 + lvHareketler.Items.Count * 30, fmt);
+            e.Graphics.DrawString("____________________________________________________", fntBaslik, sb, 100, 230 + y * 30);
+            e.Graphics.DrawString("Toplam Yatan", fntDetay, sb, 310, 270 + y * 30, fmt);
             fmt.Alignment = StringAlignment.Far;
-            e.Graphics.DrawString(txtToplamYatan.Text, fntDetay, sb, 490, 270 + lvHareketler.Items.Count * 30, fmt);
+            e.Graphics.DrawString(txtToplamYatan.Text, fntDetay, sb, 490, 270 + y * 30, fmt);
             fmt.Alignment = StringAlignment.Near;
-            e.Graphics.DrawString("Toplam Çekilen", fntDetay, sb, 310, 300 + lvHareketler.Items.Count * 30, fmt);
+            e.Graphics.DrawString("Toplam Çekilen", fntDetay, sb, 310, 300 + y * 30, fmt);
             fmt.Alignment = StringAlignment.Far;
-            e.Graphics.DrawString(txtToplamCekilen.Text, fntDetay, sb, 490, 300 + lvHareketler.Items.Count * 30, fmt);
+            e.Graphics.DrawString(txtToplamCekilen.Text, fntDetay, sb, 490, 300 + y* 30, fmt);
             fmt.Alignment = StringAlignment.Near;
-            e.Graphics.DrawString("Bakiye", fntDetay, sb, 310, 330 + lvHareketler.Items.Count * 30, fmt);
+            e.Graphics.DrawString("Bakiye", fntDetay, sb, 310, 330 + y * 30, fmt);
             fmt.Alignment = StringAlignment.Far;
-            e.Graphics.DrawString(txtBakiye.Text, fntDetay, sb, 490, 330 + lvHareketler.Items.Count * 30, fmt);
+            e.Graphics.DrawString(txtBakiye.Text, fntDetay, sb, 490, 330 + y * 30, fmt);
+            k = 0;
         }
     }
 }
