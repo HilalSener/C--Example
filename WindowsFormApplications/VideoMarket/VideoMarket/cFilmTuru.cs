@@ -66,7 +66,7 @@ namespace VideoMarket
             SqlDataReader dr;
             try
             {
-                dr = comm.ExecuteReader();  //Kontrol edilcek işlemler.
+                dr = comm.ExecuteReader();  //Kontrol edilecek işlemler.
                 int i = 0;
                 while (dr.Read())
                 {

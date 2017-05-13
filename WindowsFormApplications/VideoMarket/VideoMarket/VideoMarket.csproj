@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="cFilmTuru.cs" />
     <Compile Include="cGenel.cs" />
+    <Compile Include="cMusteri.cs" />
     <Compile Include="frmAnasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +61,12 @@
     <Compile Include="frmFilmTurleri.Designer.cs">
       <DependentUpon>frmFilmTurleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMusteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriler.Designer.cs">
+      <DependentUpon>frmMusteriler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAnasayfa.resx">
@@ -67,6 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFilmTurleri.resx">
       <DependentUpon>frmFilmTurleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriler.resx">
+      <DependentUpon>frmMusteriler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

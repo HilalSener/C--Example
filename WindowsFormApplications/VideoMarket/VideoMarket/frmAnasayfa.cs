@@ -33,5 +33,12 @@ namespace VideoMarket
             frm.MdiParent = this;
             frm.Show(); 
         }
+
+        private void musterilerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMusteriler frm = new frmMusteriler();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

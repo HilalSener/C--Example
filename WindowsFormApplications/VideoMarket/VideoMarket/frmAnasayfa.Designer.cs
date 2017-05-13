@@ -33,7 +33,7 @@
             this.mitmFilmTanimlama = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmFilmTuruTanimlama = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmfilmSorgulama = new System.Windows.Forms.ToolStripMenuItem();
-            this.müşterilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.musterilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.satışİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmSatışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.satışSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +48,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.filmBilgileriToolStripMenuItem,
-            this.müşterilerToolStripMenuItem,
+            this.musterilerToolStripMenuItem,
             this.satışİşlemleriToolStripMenuItem,
             this.raporlamaToolStripMenuItem,
             this.mitmCikis});
@@ -88,11 +88,12 @@
             this.mitmfilmSorgulama.Size = new System.Drawing.Size(234, 26);
             this.mitmfilmSorgulama.Text = "Film Sorgulama";
             // 
-            // müşterilerToolStripMenuItem
+            // musterilerToolStripMenuItem
             // 
-            this.müşterilerToolStripMenuItem.Name = "müşterilerToolStripMenuItem";
-            this.müşterilerToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
-            this.müşterilerToolStripMenuItem.Text = "Müşteriler";
+            this.musterilerToolStripMenuItem.Name = "musterilerToolStripMenuItem";
+            this.musterilerToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.musterilerToolStripMenuItem.Text = "Müşteriler";
+            this.musterilerToolStripMenuItem.Click += new System.EventHandler(this.musterilerToolStripMenuItem_Click);
             // 
             // satışİşlemleriToolStripMenuItem
             // 
@@ -161,7 +162,7 @@
         private System.Windows.Forms.ToolStripMenuItem mitmFilmTanimlama;
         private System.Windows.Forms.ToolStripMenuItem mitmFilmTuruTanimlama;
         private System.Windows.Forms.ToolStripMenuItem mitmfilmSorgulama;
-        private System.Windows.Forms.ToolStripMenuItem müşterilerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem musterilerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem satışİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filmSatışToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem satışSorgulamaToolStripMenuItem;
