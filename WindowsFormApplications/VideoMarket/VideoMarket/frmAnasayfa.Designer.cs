@@ -40,6 +40,8 @@
             this.raporlamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detaylıSatışRaporuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmCikis = new System.Windows.Forms.ToolStripMenuItem();
+            this.müşteriSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.müşteriSorgulamaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +92,9 @@
             // 
             // musterilerToolStripMenuItem
             // 
+            this.musterilerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.müşteriSorgulamaToolStripMenuItem,
+            this.müşteriSorgulamaToolStripMenuItem1});
             this.musterilerToolStripMenuItem.Name = "musterilerToolStripMenuItem";
             this.musterilerToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.musterilerToolStripMenuItem.Text = "Müşteriler";
@@ -137,6 +142,19 @@
             this.mitmCikis.Text = "Çıkış";
             this.mitmCikis.Click += new System.EventHandler(this.mitmCikis_Click);
             // 
+            // müşteriSorgulamaToolStripMenuItem
+            // 
+            this.müşteriSorgulamaToolStripMenuItem.Name = "müşteriSorgulamaToolStripMenuItem";
+            this.müşteriSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.müşteriSorgulamaToolStripMenuItem.Text = "Müşteri Tanımlama";
+            // 
+            // müşteriSorgulamaToolStripMenuItem1
+            // 
+            this.müşteriSorgulamaToolStripMenuItem1.Name = "müşteriSorgulamaToolStripMenuItem1";
+            this.müşteriSorgulamaToolStripMenuItem1.Size = new System.Drawing.Size(209, 26);
+            this.müşteriSorgulamaToolStripMenuItem1.Text = "Müşteri Sorgulama";
+            this.müşteriSorgulamaToolStripMenuItem1.Click += new System.EventHandler(this.müşteriSorgulamaToolStripMenuItem1_Click);
+            // 
             // frmAnasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,5 +187,7 @@
         private System.Windows.Forms.ToolStripMenuItem raporlamaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem detaylıSatışRaporuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mitmCikis;
+        private System.Windows.Forms.ToolStripMenuItem müşteriSorgulamaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem müşteriSorgulamaToolStripMenuItem1;
     }
 }

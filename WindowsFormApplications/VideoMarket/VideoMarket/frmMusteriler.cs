@@ -26,11 +26,8 @@ namespace VideoMarket
         private void txtArama_TextChanged(object sender, EventArgs e)
         {
             //Listview' ı girilen müşteri adına göre yenile
-            if(txtArama.Text.Trim() != "")
-            {
-                cMusteri m = new cMusteri();
-                m.MusteriBilgileriniGoster(lvMusteriler, txtArama.Text);
-            }
+            cMusteri m = new cMusteri();
+            m.MusteriBilgileriniGoster(lvMusteriler, txtArama.Text);
         }
 
         private void lvMusteriler_DoubleClick(object sender, EventArgs e)

@@ -34,6 +34,12 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSil = new System.Windows.Forms.Button();
             this.btnDegistir = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
@@ -47,12 +53,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
             this.cbFilmTuru = new System.Windows.Forms.ComboBox();
             this.txtFilmTuru = new System.Windows.Forms.TextBox();
@@ -99,6 +99,7 @@
             this.lvFilmler.TabIndex = 25;
             this.lvFilmler.UseCompatibleStateImageBehavior = false;
             this.lvFilmler.View = System.Windows.Forms.View.Details;
+            this.lvFilmler.DoubleClick += new System.EventHandler(this.lvFilmler_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -115,6 +116,35 @@
             this.columnHeader3.Text = "Film Tur No";
             this.columnHeader3.Width = 0;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Film Türü";
+            this.columnHeader4.Width = 100;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Yönetmen";
+            this.columnHeader5.Width = 150;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Oyuncular";
+            this.columnHeader6.Width = 150;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Özet";
+            this.columnHeader7.Width = 150;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Miktar";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Fiyat";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // btnSil
             // 
             this.btnSil.Enabled = false;
@@ -124,6 +154,7 @@
             this.btnSil.TabIndex = 30;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnDegistir
             // 
@@ -134,6 +165,7 @@
             this.btnDegistir.TabIndex = 28;
             this.btnDegistir.Text = "Değiştir";
             this.btnDegistir.UseVisualStyleBackColor = true;
+            this.btnDegistir.Click += new System.EventHandler(this.btnDegistir_Click);
             // 
             // btnKaydet
             // 
@@ -144,6 +176,7 @@
             this.btnKaydet.TabIndex = 27;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnYeni
             // 
@@ -153,6 +186,7 @@
             this.btnYeni.TabIndex = 26;
             this.btnYeni.Text = "Yeni";
             this.btnYeni.UseVisualStyleBackColor = true;
+            this.btnYeni.Click += new System.EventHandler(this.btnYeni_Click);
             // 
             // txtOzet
             // 
@@ -183,6 +217,7 @@
             this.txtArama.Name = "txtArama";
             this.txtArama.Size = new System.Drawing.Size(245, 22);
             this.txtArama.TabIndex = 20;
+            this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
             // 
             // txtFilmAdi
             // 
@@ -227,35 +262,6 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Film Adı";
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Film Türü";
-            this.columnHeader4.Width = 100;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Yönetmen";
-            this.columnHeader5.Width = 150;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Oyuncular";
-            this.columnHeader6.Width = 150;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Özet";
-            this.columnHeader7.Width = 150;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Miktar";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Fiyat";
-            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -298,6 +304,7 @@
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.Size = new System.Drawing.Size(111, 22);
             this.txtMiktar.TabIndex = 37;
+            this.txtMiktar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -314,6 +321,7 @@
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.Size = new System.Drawing.Size(111, 22);
             this.txtFiyat.TabIndex = 39;
+            this.txtFiyat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 

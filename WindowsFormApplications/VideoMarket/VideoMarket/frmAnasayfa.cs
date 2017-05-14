@@ -32,6 +32,7 @@ namespace VideoMarket
         private void mitmFilmTuruTanimlama_Click(object sender, EventArgs e)
         {
             frmFilmTurleri frm = new frmFilmTurleri();
+            //FormAcikmi(frm);
             frm.MdiParent = this;
             frm.Show(); 
         }
@@ -39,6 +40,13 @@ namespace VideoMarket
         private void musterilerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMusteriler frm = new frmMusteriler();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void müşteriSorgulamaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmMusteriSorgulama frm = new frmMusteriSorgulama();
             frm.MdiParent = this;
             frm.Show();
         }
