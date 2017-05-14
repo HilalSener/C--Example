@@ -62,12 +62,28 @@ namespace VideoMarket
                 cMusteri mk = new cMusteri();
                 if (mk.MusteriKontrol(txtAdi.Text, txtSoyadi.Text))
                 {
-                    MessageBox.Show("Bu kullanıcı zaten kayıtlı!", "Önceden kayıt edilmiş!");
+                    MessageBox.Show("Bu müşteri zaten kayıtlı!", "Önceden kayıt edilmiş!");
                     txtAdi.Focus();
                 }
                 else
                 {
-                    //TODO: MusteriEkle
+                    mk.MusteriAd = txtAdi.Text;
+                    mk.MusteriSoyad = txtSoyadi.Text;
+                    mk.Telefon = txtTelefon.Text;
+                    mk.Adres = txtAdres.Text;
+                    bool Sonuc = mk.MusteriEkle(mk);
+                    if (Sonuc)
+                    {
+                        MessageBox.Show("Müşteri bilgileri kayıt edildi.", "Kayıt yapıldı.");
+                        Temizle();
+                        btnKaydet.Enabled = false;
+                        mk.MusterileriGoster(lvMusteriler);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kayıt gerçekleşmedi", "Dikkat! Başarısız kayıt!");
+                        txtAdi.Focus();
+                    }
                 }
             }
         }

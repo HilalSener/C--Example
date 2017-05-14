@@ -112,7 +112,8 @@ namespace VideoMarket
 
         public void MusteriBilgileriniGoster(ListView lvMusteriler, string MusteriAd)
         {
-            SqlCommand comm = new SqlCommand("select MusteriAd, MusteriSoyad, Telefon from Musteriler where MusteriAd like @MusteriAd + '%' ");
+            lvMusteriler.Items.Clear();
+            SqlCommand comm = new SqlCommand("select MusteriAd, MusteriSoyad, Telefon from Musteriler where MusteriAd like @MusteriAd + '%' ", conn);
             comm.Parameters.Add("@MusteriAd", SqlDbType.VarChar).Value = MusteriAd;
             if (conn.State == ConnectionState.Closed) conn.Open();
             SqlDataReader dr;
@@ -154,6 +155,7 @@ namespace VideoMarket
                     m._telefon = dr[3].ToString();
                     m._adres = dr[4].ToString();
                 }
+                dr.Close();
             }
             catch (SqlException ex)
             {
@@ -168,16 +170,19 @@ namespace VideoMarket
         {
             bool VarMi = false;
             SqlCommand comm = new SqlCommand("select * from Musteri where MusteriAd = @MusteriAd and MusteriSoyad = @MusteriSoyad and Silindi = 0", conn);
-            comm.Parameters.Add("@MusteriNo", SqlDbType.Int).Value = MusteriNo;
+            comm.Parameters.Add("@MusteriAd", SqlDbType.Int).Value = MusteriAd;
+            comm.Parameters.Add("@MusteriSoyad", SqlDbType.Int).Value = MusteriSoyad;
             if (conn.State == ConnectionState.Closed) conn.Open();
             SqlDataReader dr;
             try
             {
                 dr = comm.ExecuteReader();
-                while (dr.Read())
-                {
-                    VarMi = true;
-                }
+                if (dr.HasRows) VarMi = true;
+                //while (dr.Read())
+                //{
+                //    VarMi = true;
+                //}
+                dr.Close();
             }
             catch (SqlException ex)
             {
@@ -186,6 +191,28 @@ namespace VideoMarket
             finally { conn.Close(); }
 
             return VarMi;
+        }
+
+        public bool MusteriEkle(cMusteri m)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("insert into Musteriler (MusteriAd, MusteriSoyad, Telefon, Adres) values(@Ad, @Soyad, @Telefon, @Adres)", conn);
+            comm.Parameters.Add("@Ad", SqlDbType.VarChar).Value = m._musteriAd;
+            comm.Parameters.Add("@Soyad", SqlDbType.VarChar).Value = m._musteriSoyad;
+            comm.Parameters.Add("@Telefon", SqlDbType.VarChar).Value = m._telefon;
+            comm.Parameters.Add("@Adres", SqlDbType.VarChar).Value = m._adres;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());   //insert, update ve delete de kullanılır. 
+            }
+            catch (SqlException ex)
+            {
+
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+            return Sonuc;
         }
     }
 }
