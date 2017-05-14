@@ -354,6 +354,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmFilmler";
             this.Text = "Film Tanımlama";
+            this.Load += new System.EventHandler(this.frmFilmler_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

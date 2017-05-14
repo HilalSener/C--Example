@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cFilm.cs" />
     <Compile Include="cFilmTuru.cs" />
     <Compile Include="cGenel.cs" />
     <Compile Include="cMusteri.cs" />
@@ -54,6 +55,12 @@
     </Compile>
     <Compile Include="frmAnasayfa.Designer.cs">
       <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilmler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilmler.Designer.cs">
+      <DependentUpon>frmFilmler.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFilmTurleri.cs">
       <SubType>Form</SubType>
@@ -71,6 +78,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAnasayfa.resx">
       <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilmler.resx">
+      <DependentUpon>frmFilmler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFilmTurleri.resx">
       <DependentUpon>frmFilmTurleri.cs</DependentUpon>

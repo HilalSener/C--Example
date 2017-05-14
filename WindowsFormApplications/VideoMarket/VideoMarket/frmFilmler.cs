@@ -16,5 +16,11 @@ namespace VideoMarket
         {
             InitializeComponent();
         }
+
+        private void frmFilmler_Load(object sender, EventArgs e)
+        {
+            cFilm f = new cFilm();
+            f.FilmleriGoster(lvFilmler);
+        }
     }
 }

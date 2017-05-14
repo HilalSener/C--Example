@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace VideoMarket
 {
@@ -126,6 +128,32 @@ namespace VideoMarket
 
         SqlConnection conn = new SqlConnection(cGenel.connStr);
 
-
+        public void FilmleriGoster(ListView liste)
+        {
+            liste.Items.Clear();
+            SqlCommand comm = new SqlCommand("select FilmNo, FilmAd, Filmler.FilmTurNo, TurAd, Yonetmen, Oyuncular, Ozet, Miktar, Fiyat from Filmler inner join FilmTurleri on Filmler.FilmTurNo = FilmTurleri.FilmTurNo where Varmi = 1", conn);
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            SqlDataReader dr;
+            try
+            {
+                dr = comm.ExecuteReader();
+                int i = 0;
+                while (dr.Read())
+                {
+                    liste.Items.Add(dr[0].ToString());
+                    for (int j = 1; j < liste.Columns.Count; j++)
+                    {
+                        liste.Items[i].SubItems.Add(dr[j].ToString());
+                    }
+                    i++;
+                }
+                dr.Close();
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+        }
     }
 }

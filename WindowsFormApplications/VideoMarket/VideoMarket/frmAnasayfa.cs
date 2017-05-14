@@ -24,7 +24,9 @@ namespace VideoMarket
 
         private void mitmFilmTanimlama_Click(object sender, EventArgs e)
         {
-
+            frmFilmler frm = new frmFilmler();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void mitmFilmTuruTanimlama_Click(object sender, EventArgs e)
