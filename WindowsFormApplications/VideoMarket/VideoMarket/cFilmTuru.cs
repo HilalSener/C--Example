@@ -83,6 +83,52 @@ namespace VideoMarket
             finally { conn.Close(); }  //hatayla karşılaşılsın ya da karşılaşılmasın mutlaka çalışır.
         }
 
+        //public void FilmTurleriGoster(ComboBox liste)
+        //{
+        //    liste.Items.Clear();
+        //    SqlCommand comm = new SqlCommand("select TurAd from FilmTurleri where Silindi = 0", conn);
+        //    if (conn.State == System.Data.ConnectionState.Closed) conn.Open();
+        //    SqlDataReader dr;
+        //    try
+        //    {
+        //        dr = comm.ExecuteReader(); 
+        //        while (dr.Read())
+        //        {
+        //            liste.Items.Add(dr["TurAd"].ToString());
+        //        }
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        string hata = ex.Message; 
+        //    }
+        //    finally { conn.Close(); } 
+        //}
+
+        public void FilmTurleriGoster(ComboBox liste)
+        {
+            liste.Items.Clear();
+            SqlCommand comm = new SqlCommand("select * from FilmTurleri where Silindi = 0", conn);
+            if (conn.State == System.Data.ConnectionState.Closed) conn.Open();
+            SqlDataReader dr;
+            try
+            {
+                dr = comm.ExecuteReader();
+                while (dr.Read())
+                {
+                    cFilmTuru ft = new cFilmTuru();
+                    ft._filmTurNo = Convert.ToInt32(dr["FilmTurNo"]);
+                    ft._turAd = dr["TurAd"].ToString();
+                    liste.Items.Add(ft);
+                }
+                dr.Close();
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+        }
+
         public bool FilmTuruKontrol(string FilmTuru)
         {
             bool VarMi = false;
@@ -210,6 +256,30 @@ namespace VideoMarket
             }
             finally { conn.Close(); }
             return Sonuc;
+        }
+
+        public int FilmTurNoGetirByTurAdi(string TurAdi)
+        {
+            int TurNo = 0;
+            SqlCommand comm = new SqlCommand("select FilmTurNo from FilmTurleri where TurAd=@TurAd and Silindi = 0", conn);
+            comm.Parameters.Add("@TurAd", SqlDbType.VarChar).Value = TurAdi;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                TurNo = Convert.ToInt32(comm.ExecuteScalar());   //insert, update ve delete de kullanılır. 
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+
+            return TurNo;
+        }
+
+        public override string ToString()  //Mevcut ToString methodunun işlevini ezip yeni bir işlev kazandırıyoruz.
+        {
+            return TurAd;
         }
     }
 }

@@ -93,7 +93,7 @@
             this.columnHeader8,
             this.columnHeader9});
             this.lvFilmler.FullRowSelect = true;
-            this.lvFilmler.Location = new System.Drawing.Point(470, 114);
+            this.lvFilmler.Location = new System.Drawing.Point(470, 112);
             this.lvFilmler.Name = "lvFilmler";
             this.lvFilmler.Size = new System.Drawing.Size(390, 323);
             this.lvFilmler.TabIndex = 25;
@@ -268,11 +268,13 @@
             // cbFilmTuru
             // 
             this.cbFilmTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFilmTuru.DropDownWidth = 100;
             this.cbFilmTuru.FormattingEnabled = true;
             this.cbFilmTuru.Location = new System.Drawing.Point(403, 153);
             this.cbFilmTuru.Name = "cbFilmTuru";
             this.cbFilmTuru.Size = new System.Drawing.Size(22, 24);
             this.cbFilmTuru.TabIndex = 36;
+            this.cbFilmTuru.SelectedIndexChanged += new System.EventHandler(this.cbFilmTuru_SelectedIndexChanged);
             // 
             // txtFilmTuru
             // 
@@ -328,11 +330,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(916, 636);
+            this.Controls.Add(this.cbFilmTuru);
             this.Controls.Add(this.txtFiyat);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtMiktar);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbFilmTuru);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTurNo);
             this.Controls.Add(this.txtFilmNo);
