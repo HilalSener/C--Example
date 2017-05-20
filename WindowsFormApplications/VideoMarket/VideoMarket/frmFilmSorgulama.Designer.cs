@@ -128,6 +128,7 @@
             this.lvFilmler.TabIndex = 10;
             this.lvFilmler.UseCompatibleStateImageBehavior = false;
             this.lvFilmler.View = System.Windows.Forms.View.Details;
+            this.lvFilmler.DoubleClick += new System.EventHandler(this.lvFilmler_DoubleClick);
             // 
             // columnHeader8
             // 

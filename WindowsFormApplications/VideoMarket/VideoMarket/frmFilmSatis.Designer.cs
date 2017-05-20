@@ -35,8 +35,8 @@
             this.btnMusteriBul = new System.Windows.Forms.Button();
             this.txtMusteriNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtFilmBul = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtFilm = new System.Windows.Forms.TextBox();
+            this.btnFilmBul = new System.Windows.Forms.Button();
             this.txtFilmNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSil = new System.Windows.Forms.Button();
@@ -63,6 +63,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtToplamTutar = new System.Windows.Forms.TextBox();
             this.txtSatisNo = new System.Windows.Forms.TextBox();
+            this.txtStok = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtTarih
@@ -104,6 +106,7 @@
             this.btnMusteriBul.TabIndex = 3;
             this.btnMusteriBul.Text = "Bul";
             this.btnMusteriBul.UseVisualStyleBackColor = true;
+            this.btnMusteriBul.Click += new System.EventHandler(this.btnMusteriBul_Click);
             // 
             // txtMusteriNo
             // 
@@ -122,25 +125,26 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Müşteri Bul";
             // 
-            // txtFilmBul
+            // txtFilm
             // 
-            this.txtFilmBul.Location = new System.Drawing.Point(542, 98);
-            this.txtFilmBul.Name = "txtFilmBul";
-            this.txtFilmBul.Size = new System.Drawing.Size(118, 22);
-            this.txtFilmBul.TabIndex = 0;
+            this.txtFilm.Location = new System.Drawing.Point(542, 98);
+            this.txtFilm.Name = "txtFilm";
+            this.txtFilm.Size = new System.Drawing.Size(118, 22);
+            this.txtFilm.TabIndex = 0;
             // 
-            // button1
+            // btnFilmBul
             // 
-            this.button1.Location = new System.Drawing.Point(461, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Bul";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFilmBul.Location = new System.Drawing.Point(461, 98);
+            this.btnFilmBul.Name = "btnFilmBul";
+            this.btnFilmBul.Size = new System.Drawing.Size(75, 23);
+            this.btnFilmBul.TabIndex = 3;
+            this.btnFilmBul.Text = "Bul";
+            this.btnFilmBul.UseVisualStyleBackColor = true;
+            this.btnFilmBul.Click += new System.EventHandler(this.btnFilmBul_Click);
             // 
             // txtFilmNo
             // 
-            this.txtFilmNo.Location = new System.Drawing.Point(666, 98);
+            this.txtFilmNo.Location = new System.Drawing.Point(722, 99);
             this.txtFilmNo.Name = "txtFilmNo";
             this.txtFilmNo.ReadOnly = true;
             this.txtFilmNo.Size = new System.Drawing.Size(36, 22);
@@ -201,6 +205,9 @@
             this.txtAdet.Size = new System.Drawing.Size(56, 22);
             this.txtAdet.TabIndex = 0;
             this.txtAdet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAdet.TextChanged += new System.EventHandler(this.txtAdet_TextChanged);
+            this.txtAdet.Enter += new System.EventHandler(this.txtAdet_Enter);
+            this.txtAdet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtAdet_MouseDown);
             // 
             // label4
             // 
@@ -218,6 +225,9 @@
             this.txtBirimFiyat.Size = new System.Drawing.Size(76, 22);
             this.txtBirimFiyat.TabIndex = 0;
             this.txtBirimFiyat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBirimFiyat.TextChanged += new System.EventHandler(this.txtBirimFiyat_TextChanged);
+            this.txtBirimFiyat.Enter += new System.EventHandler(this.txtBirimFiyat_Enter);
+            this.txtBirimFiyat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtBirimFiyat_MouseDown);
             // 
             // label5
             // 
@@ -348,6 +358,22 @@
             this.txtSatisNo.Size = new System.Drawing.Size(36, 22);
             this.txtSatisNo.TabIndex = 35;
             // 
+            // txtStok
+            // 
+            this.txtStok.Location = new System.Drawing.Point(666, 98);
+            this.txtStok.Name = "txtStok";
+            this.txtStok.Size = new System.Drawing.Size(50, 22);
+            this.txtStok.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(674, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 17);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Stok";
+            // 
             // frmFilmSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,9 +388,10 @@
             this.Controls.Add(this.txtFilmNo);
             this.Controls.Add(this.txtSatisNo);
             this.Controls.Add(this.txtMusteriNo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFilmBul);
             this.Controls.Add(this.btnMusteriBul);
             this.Controls.Add(this.dtpTarih);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -372,7 +399,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtFilmBul);
+            this.Controls.Add(this.txtStok);
+            this.Controls.Add(this.txtFilm);
             this.Controls.Add(this.txtTutar);
             this.Controls.Add(this.txtBirimFiyat);
             this.Controls.Add(this.txtAdet);
@@ -397,8 +425,8 @@
         private System.Windows.Forms.Button btnMusteriBul;
         private System.Windows.Forms.TextBox txtMusteriNo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtFilmBul;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtFilm;
+        private System.Windows.Forms.Button btnFilmBul;
         private System.Windows.Forms.TextBox txtFilmNo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSil;
@@ -425,5 +453,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtToplamTutar;
         private System.Windows.Forms.TextBox txtSatisNo;
+        private System.Windows.Forms.TextBox txtStok;
+        private System.Windows.Forms.Label label8;
     }
 }

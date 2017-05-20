@@ -41,11 +41,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lvMusteriler
             // 
             this.lvMusteriler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -57,6 +59,7 @@
             this.lvMusteriler.TabIndex = 7;
             this.lvMusteriler.UseCompatibleStateImageBehavior = false;
             this.lvMusteriler.View = System.Windows.Forms.View.Details;
+            this.lvMusteriler.DoubleClick += new System.EventHandler(this.lvMusteriler_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -146,6 +149,12 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Adrese Göre Arama";
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.DisplayIndex = 1;
+            this.columnHeader5.Text = "Müşteri No";
+            this.columnHeader5.Width = 0;
+            // 
             // frmMusteriSorgulama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -183,5 +192,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

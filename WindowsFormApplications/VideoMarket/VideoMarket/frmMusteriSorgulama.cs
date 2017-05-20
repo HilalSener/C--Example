@@ -19,7 +19,8 @@ namespace VideoMarket
 
         private void frmMusteriSorgulama_Load(object sender, EventArgs e)
         {
-            //TODO: MusterileriGoster
+            cMusteri m = new cMusteri();
+            m.MusterileriGoster(lvMusteriler);
         }
 
         private void txtAdaGore_TextChanged(object sender, EventArgs e)
@@ -44,6 +45,13 @@ namespace VideoMarket
         {
             cMusteri m = new cMusteri();
             m.MusteriGosterBySorgulama(lvMusteriler, txtAdaGore.Text, txtSoyadaGore.Text, txtTelefonaGore.Text, txtAdreseGore.Text);
+        }
+
+        private void lvMusteriler_DoubleClick(object sender, EventArgs e)
+        {
+            cGenel.musteriNo = Convert.ToInt32(lvMusteriler.SelectedItems[0].SubItems[0].Text);
+            cGenel.musteri = lvMusteriler.SelectedItems[0].SubItems[1].Text + " " + lvMusteriler.SelectedItems[0].SubItems[2].Text;
+            this.Close();
         }
     }
 }

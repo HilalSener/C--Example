@@ -88,7 +88,7 @@ namespace VideoMarket
 
         public void MusterileriGoster(ListView lvMusteriler)
         {
-            SqlCommand comm = new SqlCommand("select MusteriAd, MusteriSoyad, Telefon from Musteriler where Silindi = 0", conn);
+            SqlCommand comm = new SqlCommand("select MusteriNo, MusteriAd, MusteriSoyad, Telefon from Musteriler where Silindi = 0", conn);
             if (conn.State == ConnectionState.Closed) conn.Open();
             SqlDataReader dr;
             try
@@ -100,6 +100,7 @@ namespace VideoMarket
                     lvMusteriler.Items.Add(dr[0].ToString());
                     lvMusteriler.Items[i].SubItems.Add(dr[1].ToString());
                     lvMusteriler.Items[i].SubItems.Add(dr[2].ToString());
+                    lvMusteriler.Items[i].SubItems.Add(dr[3].ToString());
                     i++;
                 }
             }
