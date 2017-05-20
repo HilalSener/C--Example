@@ -11,89 +11,89 @@ namespace VideoMarket
 {
     public class cFilmSatis
     {
-        private int SatisNo;
-        private DateTime Tarih;
-        private int FilmNo;
-        private int MusteriNo;
-        private int Adet;
-        private double BirimFiyat;
-
+        private int satisNo;
+        private DateTime tarih;
+        private int filmNo;
+        private int musteriNo;
+        private int adet;
+        private double birimFiyat;
+        
         #region Properties
-        public int SatisNo1
+        public int SatisNo
         {
             get
             {
-                return SatisNo;
+                return satisNo;
             }
 
             set
             {
-                SatisNo = value;
+                satisNo = value;
             }
         }
 
-        public DateTime Tarih1
+        public DateTime Tarih
         {
             get
             {
-                return Tarih;
+                return tarih;
             }
 
             set
             {
-                Tarih = value;
+                tarih = value;
             }
         }
 
-        public int FilmNo1
+        public int FilmNo
         {
             get
             {
-                return FilmNo;
+                return filmNo;
             }
 
             set
             {
-                FilmNo = value;
+                filmNo = value;
             }
         }
 
-        public int MusteriNo1
+        public int MusteriNo
         {
             get
             {
-                return MusteriNo;
+                return musteriNo;
             }
 
             set
             {
-                MusteriNo = value;
+                musteriNo = value;
             }
         }
 
-        public int Adet1
+        public int Adet
         {
             get
             {
-                return Adet;
+                return adet;
             }
 
             set
             {
-                Adet = value;
+                adet = value;
             }
         }
 
-        public double BirimFiyat1
+        public double BirimFiyat
         {
             get
             {
-                return BirimFiyat;
+                return birimFiyat;
             }
 
             set
             {
-                BirimFiyat = value;
+                birimFiyat = value;
             }
         }
         #endregion
@@ -105,7 +105,7 @@ namespace VideoMarket
             liste.Items.Clear();
             int TAdet = 0;
             double TTutar = 0;
-            SqlCommand comm = new SqlCommand("select SatisNo, Tarih, FilmAd, MusteriAd + ' ' + MusteriSoyad as Musteri, BirimFiyat, Adet, BirimFiyat*Adet as Tutar, fs.FilmNo, fs.MusteriNo from FilmSatis fs inner join Filmler f on fs.FilmNo = f.FilmNo inner join Musteriler m on fs.MusteriNo = m.MusteriNo where fs.Silindi = 0 order by Tarih desc ", conn);
+            SqlCommand comm = new SqlCommand("select SatisNo, Tarih, FilmAd, MusteriAd + ' ' + MusteriSoyad as Musteri, BirimFiyat, Adet, BirimFiyat*Adet as Tutar, fs.FilmNo, fs.MusteriNo from FilmSatis fs inner join Filmler f on fs.FilmNo = f.FilmNo inner join Musteriler m on fs.MusteriNo = m.MusteriNo where fs.Silindi = 0 order by Tarih desc, SatisNo desc", conn);
             if (conn.State == ConnectionState.Closed) conn.Open();
             SqlDataReader dr;
             try
@@ -132,6 +132,29 @@ namespace VideoMarket
                 string hata = ex.Message;
             }
             finally { conn.Close(); }
+        }
+
+        public bool SatisEkle(cFilmSatis fs)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("insert into FilmSatis (Tarih, FilmNo, MusteriNo, Adet, BirimFiyat) values(@Tarih, @FilmNo, @MusteriNo, @Adet, @BirimFiyat)", conn);
+            comm.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = fs.tarih;
+            comm.Parameters.Add("@FilmNo", SqlDbType.Int).Value = fs.filmNo;
+            comm.Parameters.Add("@MusteriNo", SqlDbType.Int).Value = fs.musteriNo;
+            comm.Parameters.Add("@Adet", SqlDbType.Int).Value = fs.adet;
+            comm.Parameters.Add("@BirimFiyat", SqlDbType.Money).Value = fs.birimFiyat;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery()); 
+            }
+            catch (SqlException ex)
+            {
+
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+            return Sonuc;
         }
     }
 }

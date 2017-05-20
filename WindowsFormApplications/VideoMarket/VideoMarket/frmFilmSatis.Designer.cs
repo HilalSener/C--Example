@@ -100,6 +100,7 @@
             // 
             // btnMusteriBul
             // 
+            this.btnMusteriBul.Enabled = false;
             this.btnMusteriBul.Location = new System.Drawing.Point(237, 99);
             this.btnMusteriBul.Name = "btnMusteriBul";
             this.btnMusteriBul.Size = new System.Drawing.Size(75, 23);
@@ -134,6 +135,7 @@
             // 
             // btnFilmBul
             // 
+            this.btnFilmBul.Enabled = false;
             this.btnFilmBul.Location = new System.Drawing.Point(461, 98);
             this.btnFilmBul.Name = "btnFilmBul";
             this.btnFilmBul.Size = new System.Drawing.Size(75, 23);
@@ -188,6 +190,7 @@
             this.btnKaydet.TabIndex = 37;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnYeni
             // 
@@ -197,6 +200,7 @@
             this.btnYeni.TabIndex = 36;
             this.btnYeni.Text = "Yeni";
             this.btnYeni.UseVisualStyleBackColor = true;
+            this.btnYeni.Click += new System.EventHandler(this.btnYeni_Click);
             // 
             // txtAdet
             // 

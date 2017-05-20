@@ -98,5 +98,55 @@ namespace VideoMarket
         {
             txtBirimFiyat.Select(0, txtBirimFiyat.Text.Length);
         }
+
+        private void btnYeni_Click(object sender, EventArgs e)
+        {
+            btnFilmBul.Enabled = true;
+            btnMusteriBul.Enabled = true;
+            btnKaydet.Enabled = true;
+            Temizle();
+        }
+
+        public void Temizle()
+        {
+            //txtMusteriNo.Clear();
+            //txtMusteri.Clear();
+            txtFilmNo.Clear();
+            txtFilm.Clear();
+            txtStok.Clear();
+            txtAdet.Text = "1";
+            txtBirimFiyat.Text = "0";
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            if (txtMusteri.Text.Trim() != "" || txtFilm.Text.Trim() != "")
+            {
+                if (Convert.ToInt32(txtAdet.Text) <= Convert.ToInt32(txtStok.Text))
+                {
+                    cFilmSatis fs = new cFilmSatis();
+                    fs.Tarih = Convert.ToDateTime(txtTarih.Text);
+                    fs.FilmNo = Convert.ToInt32(txtFilmNo.Text);
+                    fs.MusteriNo = Convert.ToInt32(txtMusteriNo.Text);
+                    fs.Adet = Convert.ToInt32(txtAdet.Text);
+                    fs.BirimFiyat = Convert.ToDouble(txtBirimFiyat.Text);
+                    if (fs.SatisEkle(fs))
+                    {
+                        MessageBox.Show("Satış bilgileri eklendi!");
+                        fs.SatislariGetir(lvSatislar, txtToplamAdet, txtToplamTutar);
+                        Temizle();
+                        btnKaydet.Enabled = false;
+                        btnFilmBul.Enabled = false;
+                        btnMusteriBul.Enabled = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("En fazla " + txtStok.Text + " adet satılabilir!", "Yetersiz stok miktarı!");
+                }
+            }
+            else
+                MessageBox.Show("Mutlaka müştri ve film seçilmelidir!", "Dikkat, Eksik bilgi!");
+        }
     }
 }
