@@ -33,10 +33,10 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtAdaGore = new System.Windows.Forms.TextBox();
+            this.txtSoyadaGore = new System.Windows.Forms.TextBox();
+            this.txtTelefonaGore = new System.Windows.Forms.TextBox();
+            this.txtAdreseGore = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,34 +78,37 @@
             this.columnHeader4.Text = "Adres";
             this.columnHeader4.Width = 150;
             // 
-            // textBox1
+            // txtAdaGore
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtAdaGore.Location = new System.Drawing.Point(33, 85);
+            this.txtAdaGore.Name = "txtAdaGore";
+            this.txtAdaGore.Size = new System.Drawing.Size(100, 22);
+            this.txtAdaGore.TabIndex = 8;
+            this.txtAdaGore.TextChanged += new System.EventHandler(this.txtAdaGore_TextChanged);
             // 
-            // textBox2
+            // txtSoyadaGore
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 22);
-            this.textBox2.TabIndex = 8;
+            this.txtSoyadaGore.Location = new System.Drawing.Point(139, 85);
+            this.txtSoyadaGore.Name = "txtSoyadaGore";
+            this.txtSoyadaGore.Size = new System.Drawing.Size(114, 22);
+            this.txtSoyadaGore.TabIndex = 8;
+            this.txtSoyadaGore.TextChanged += new System.EventHandler(this.txtSoyadaGore_TextChanged);
             // 
-            // textBox3
+            // txtTelefonaGore
             // 
-            this.textBox3.Location = new System.Drawing.Point(259, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 8;
+            this.txtTelefonaGore.Location = new System.Drawing.Point(259, 85);
+            this.txtTelefonaGore.Name = "txtTelefonaGore";
+            this.txtTelefonaGore.Size = new System.Drawing.Size(100, 22);
+            this.txtTelefonaGore.TabIndex = 8;
+            this.txtTelefonaGore.TextChanged += new System.EventHandler(this.txtTelefonaGore_TextChanged);
             // 
-            // textBox4
+            // txtAdreseGore
             // 
-            this.textBox4.Location = new System.Drawing.Point(365, 85);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 22);
-            this.textBox4.TabIndex = 8;
+            this.txtAdreseGore.Location = new System.Drawing.Point(365, 85);
+            this.txtAdreseGore.Name = "txtAdreseGore";
+            this.txtAdreseGore.Size = new System.Drawing.Size(130, 22);
+            this.txtAdreseGore.TabIndex = 8;
+            this.txtAdreseGore.TextChanged += new System.EventHandler(this.txtAdreseGore_TextChanged);
             // 
             // label1
             // 
@@ -152,10 +155,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAdreseGore);
+            this.Controls.Add(this.txtTelefonaGore);
+            this.Controls.Add(this.txtSoyadaGore);
+            this.Controls.Add(this.txtAdaGore);
             this.Controls.Add(this.lvMusteriler);
             this.Name = "frmMusteriSorgulama";
             this.Text = "frmMusteriSorgulama";
@@ -172,10 +175,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtAdaGore;
+        private System.Windows.Forms.TextBox txtSoyadaGore;
+        private System.Windows.Forms.TextBox txtTelefonaGore;
+        private System.Windows.Forms.TextBox txtAdreseGore;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -50,5 +50,19 @@ namespace VideoMarket
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void mitmfilmSorgulama_Click(object sender, EventArgs e)
+        {
+            frmFilmSorgulama frm = new frmFilmSorgulama();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void filmSatışToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFilmSatis frm = new frmFilmSatis();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -214,5 +214,39 @@ namespace VideoMarket
             finally { conn.Close(); }
             return Sonuc;
         }
+
+        public void MusteriGosterBySorgulama(ListView liste, string AdaGore, string SoyadaGore, string TelefonaGore, string AdreseGore)
+        {
+            liste.Items.Clear();
+            //string Sorgu = "select * from Musteriler where Silindi = 0";
+            //if (AdaGore != "") Sorgu += " and MusteriAd like @MusteriAd + '%' ";
+            //SqlCommand comm = new SqlCommand(Sorgu, conn);
+            SqlCommand comm = new SqlCommand("select * from Musteriler where Silindi = 0 and MusteriAd like @MusteriAd + '%' and MusteriSoyad like @MusteriSoyad + '%' and Telefon like @Telefon + '%' and Adres like @Adres + '%' ", conn);
+            comm.Parameters.Add("@MusteriAd", SqlDbType.VarChar).Value = AdaGore;
+            comm.Parameters.Add("@MusteriSoyad", SqlDbType.VarChar).Value = SoyadaGore;
+            comm.Parameters.Add("@Telefon", SqlDbType.VarChar).Value = TelefonaGore;
+            comm.Parameters.Add("@Adres", SqlDbType.VarChar).Value = AdreseGore;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            SqlDataReader dr;
+            try
+            {
+                dr = comm.ExecuteReader();
+                int i = 0;
+                while (dr.Read())
+                {
+                    liste.Items.Add(dr[0].ToString());
+                    liste.Items[i].SubItems.Add(dr[1].ToString());
+                    liste.Items[i].SubItems.Add(dr[2].ToString());
+                    liste.Items[i].SubItems.Add(dr[3].ToString());
+                    liste.Items[i].SubItems.Add(dr[4].ToString());
+                    i++;
+                }
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+        }
     }
 }

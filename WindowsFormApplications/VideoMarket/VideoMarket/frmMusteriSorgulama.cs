@@ -22,9 +22,28 @@ namespace VideoMarket
             //TODO: MusterileriGoster
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtAdaGore_TextChanged(object sender, EventArgs e)
         {
-            //TODO: Tüm aramalar tek sorgu ile yapılacak
+            cMusteri m = new cMusteri();
+            m.MusteriGosterBySorgulama(lvMusteriler, txtAdaGore.Text, txtSoyadaGore.Text, txtTelefonaGore.Text, txtAdreseGore.Text);
+        }
+
+        private void txtSoyadaGore_TextChanged(object sender, EventArgs e)
+        {
+            cMusteri m = new cMusteri();
+            m.MusteriGosterBySorgulama(lvMusteriler, txtAdaGore.Text, txtSoyadaGore.Text, txtTelefonaGore.Text, txtAdreseGore.Text);
+        }
+
+        private void txtTelefonaGore_TextChanged(object sender, EventArgs e)
+        {
+            cMusteri m = new cMusteri();
+            m.MusteriGosterBySorgulama(lvMusteriler, txtAdaGore.Text, txtSoyadaGore.Text, txtTelefonaGore.Text, txtAdreseGore.Text);
+        }
+
+        private void txtAdreseGore_TextChanged(object sender, EventArgs e)
+        {
+            cMusteri m = new cMusteri();
+            m.MusteriGosterBySorgulama(lvMusteriler, txtAdaGore.Text, txtSoyadaGore.Text, txtTelefonaGore.Text, txtAdreseGore.Text);
         }
     }
 }

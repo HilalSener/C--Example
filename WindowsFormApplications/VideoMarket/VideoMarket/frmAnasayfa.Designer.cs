@@ -34,14 +34,14 @@
             this.mitmFilmTuruTanimlama = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmfilmSorgulama = new System.Windows.Forms.ToolStripMenuItem();
             this.musterilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.müşteriSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.müşteriSorgulamaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.satışİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmSatışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.satışSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporlamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detaylıSatışRaporuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmCikis = new System.Windows.Forms.ToolStripMenuItem();
-            this.müşteriSorgulamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.müşteriSorgulamaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +89,7 @@
             this.mitmfilmSorgulama.Name = "mitmfilmSorgulama";
             this.mitmfilmSorgulama.Size = new System.Drawing.Size(234, 26);
             this.mitmfilmSorgulama.Text = "Film Sorgulama";
+            this.mitmfilmSorgulama.Click += new System.EventHandler(this.mitmfilmSorgulama_Click);
             // 
             // musterilerToolStripMenuItem
             // 
@@ -99,6 +100,19 @@
             this.musterilerToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.musterilerToolStripMenuItem.Text = "Müşteriler";
             this.musterilerToolStripMenuItem.Click += new System.EventHandler(this.musterilerToolStripMenuItem_Click);
+            // 
+            // müşteriSorgulamaToolStripMenuItem
+            // 
+            this.müşteriSorgulamaToolStripMenuItem.Name = "müşteriSorgulamaToolStripMenuItem";
+            this.müşteriSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.müşteriSorgulamaToolStripMenuItem.Text = "Müşteri Tanımlama";
+            // 
+            // müşteriSorgulamaToolStripMenuItem1
+            // 
+            this.müşteriSorgulamaToolStripMenuItem1.Name = "müşteriSorgulamaToolStripMenuItem1";
+            this.müşteriSorgulamaToolStripMenuItem1.Size = new System.Drawing.Size(209, 26);
+            this.müşteriSorgulamaToolStripMenuItem1.Text = "Müşteri Sorgulama";
+            this.müşteriSorgulamaToolStripMenuItem1.Click += new System.EventHandler(this.müşteriSorgulamaToolStripMenuItem1_Click);
             // 
             // satışİşlemleriToolStripMenuItem
             // 
@@ -114,6 +128,7 @@
             this.filmSatışToolStripMenuItem.Name = "filmSatışToolStripMenuItem";
             this.filmSatışToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.filmSatışToolStripMenuItem.Text = "Film Satış";
+            this.filmSatışToolStripMenuItem.Click += new System.EventHandler(this.filmSatışToolStripMenuItem_Click);
             // 
             // satışSorgulamaToolStripMenuItem
             // 
@@ -141,19 +156,6 @@
             this.mitmCikis.Size = new System.Drawing.Size(51, 24);
             this.mitmCikis.Text = "Çıkış";
             this.mitmCikis.Click += new System.EventHandler(this.mitmCikis_Click);
-            // 
-            // müşteriSorgulamaToolStripMenuItem
-            // 
-            this.müşteriSorgulamaToolStripMenuItem.Name = "müşteriSorgulamaToolStripMenuItem";
-            this.müşteriSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
-            this.müşteriSorgulamaToolStripMenuItem.Text = "Müşteri Tanımlama";
-            // 
-            // müşteriSorgulamaToolStripMenuItem1
-            // 
-            this.müşteriSorgulamaToolStripMenuItem1.Name = "müşteriSorgulamaToolStripMenuItem1";
-            this.müşteriSorgulamaToolStripMenuItem1.Size = new System.Drawing.Size(209, 26);
-            this.müşteriSorgulamaToolStripMenuItem1.Text = "Müşteri Sorgulama";
-            this.müşteriSorgulamaToolStripMenuItem1.Click += new System.EventHandler(this.müşteriSorgulamaToolStripMenuItem1_Click);
             // 
             // frmAnasayfa
             // 

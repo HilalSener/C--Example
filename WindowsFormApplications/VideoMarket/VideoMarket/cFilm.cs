@@ -301,5 +301,38 @@ namespace VideoMarket
             }
             finally { conn.Close(); }
         }
+        public void FilmleriGosterBySorgulama(ListView liste, string AdaGore, string TureGore, string YonetmeneGore, string OyuncularaGore)
+        {
+            liste.Items.Clear();
+            //string Sorgu = "select * from Musteriler where Silindi = 0";
+            //if (AdaGore != "") Sorgu += " and MusteriAd like @MusteriAd + '%' ";
+            //SqlCommand comm = new SqlCommand(Sorgu, conn);
+            SqlCommand comm = new SqlCommand("select FilmNo, FilmAd, Filmler.FilmTurNo, TurAd, Yonetmen, Oyuncular, Ozet, Miktar, Fiyat from Filmler inner join FilmTurleri on Filmler.FilmTurNo = FilmTurleri.FilmTurNo where Varmi = 1 and FilmAd like @FilmAd + '%' and TurAd like @TurAd + '%' and Yonetmen like @Yonetmen + '%' and Oyuncular like @Oyuncular + '%' ", conn);
+            comm.Parameters.Add("@FilmAd", SqlDbType.VarChar).Value = AdaGore;
+            comm.Parameters.Add("@TurAd", SqlDbType.VarChar).Value = TureGore;
+            comm.Parameters.Add("@Yonetmen", SqlDbType.VarChar).Value = YonetmeneGore;
+            comm.Parameters.Add("@Oyuncular", SqlDbType.VarChar).Value = OyuncularaGore;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            SqlDataReader dr;
+            try
+            {
+                dr = comm.ExecuteReader();
+                int i = 0;
+                while (dr.Read())
+                {
+                    liste.Items.Add(dr[0].ToString());
+                    for (int j = 1; j < liste.Columns.Count; j++)
+                    {
+                        liste.Items[i].SubItems.Add(dr[j].ToString());
+                    }
+                    i++;
+                }
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+        }
     }
 }

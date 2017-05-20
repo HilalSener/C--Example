@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cFilm.cs" />
+    <Compile Include="cFilmSatis.cs" />
     <Compile Include="cFilmTuru.cs" />
     <Compile Include="cGenel.cs" />
     <Compile Include="cMusteri.cs" />
@@ -61,6 +62,18 @@
     </Compile>
     <Compile Include="frmFilmler.Designer.cs">
       <DependentUpon>frmFilmler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilmSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilmSatis.Designer.cs">
+      <DependentUpon>frmFilmSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilmSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilmSorgulama.Designer.cs">
+      <DependentUpon>frmFilmSorgulama.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFilmTurleri.cs">
       <SubType>Form</SubType>
@@ -87,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFilmler.resx">
       <DependentUpon>frmFilmler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilmSatis.resx">
+      <DependentUpon>frmFilmSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilmSorgulama.resx">
+      <DependentUpon>frmFilmSorgulama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFilmTurleri.resx">
       <DependentUpon>frmFilmTurleri.cs</DependentUpon>
