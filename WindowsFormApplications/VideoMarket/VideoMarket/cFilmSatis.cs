@@ -156,5 +156,25 @@ namespace VideoMarket
             finally { conn.Close(); }
             return Sonuc;
         }
+
+        public bool StokGuncelleBySatis(int FilmNo, int Adet)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("update Filmler set Miktar -= @Adet where FilmNo = @FilmNo");
+            comm.Parameters.Add("@FilmNo", SqlDbType.Int).Value = FilmNo;
+            comm.Parameters.Add("@Adet", SqlDbType.Int).Value = Adet;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+
+            return Sonuc;
+        }
     }
 }

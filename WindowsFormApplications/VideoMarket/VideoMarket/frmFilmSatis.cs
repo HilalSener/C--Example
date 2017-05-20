@@ -134,6 +134,10 @@ namespace VideoMarket
                     {
                         MessageBox.Show("Satış bilgileri eklendi!");
                         fs.SatislariGetir(lvSatislar, txtToplamAdet, txtToplamTutar);
+                        //Satılan film stoktan düşülmeli...
+                        cFilm f = new cFilm();
+                        if (f.StokGuncelleBySatis(fs.FilmNo, fs.Adet))
+                            MessageBox.Show("Stok güncellendi!");
                         Temizle();
                         btnKaydet.Enabled = false;
                         btnFilmBul.Enabled = false;
