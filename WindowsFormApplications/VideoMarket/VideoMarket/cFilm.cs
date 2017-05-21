@@ -301,6 +301,7 @@ namespace VideoMarket
             }
             finally { conn.Close(); }
         }
+
         public void FilmleriGosterBySorgulama(ListView liste, string AdaGore, string TureGore, string YonetmeneGore, string OyuncularaGore)
         {
             liste.Items.Clear();
@@ -334,5 +335,68 @@ namespace VideoMarket
             }
             finally { conn.Close(); }
         }
+
+        public bool StokGuncelleBySatisEkle(int FilmNo, int Adet)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("update Filmler set Miktar = Miktar - @Adet where FilmNo = @FilmNo", conn);
+            comm.Parameters.Add("@Adet", SqlDbType.Int).Value = Adet;
+            comm.Parameters.Add("@FilmNo", SqlDbType.Int).Value = FilmNo;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+
+            return Sonuc;
+        }
+
+        public bool StokGuncelleBySatisIptal(int FilmNo, int Adet)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("update Filmler set Miktar = @Miktar + @Adet where FilmNo = @FilmNo", conn);
+            comm.Parameters.Add("@FilmNo", SqlDbType.Int).Value = FilmNo;
+            comm.Parameters.Add("@Adet", SqlDbType.Int).Value = Adet;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+
+            return Sonuc;
+        }
+
+        public bool StokGuncelleBySatisDegistir(int FilmNo, int YeniAdet, int OrjAdet)
+        { 
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("update Filmler set Miktar = @Miktar + @OrjAdet - @YeniAdet where FilmNo = @FilmNo", conn);
+            comm.Parameters.Add("@YeniAdet", SqlDbType.Int).Value = YeniAdet;
+            comm.Parameters.Add("@OrjAdet", SqlDbType.Int).Value = OrjAdet;
+            comm.Parameters.Add("@FilmNo", SqlDbType.Int).Value = FilmNo;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+
+            return Sonuc;
+        }
+
+       
     }
 }

@@ -105,7 +105,7 @@ namespace VideoMarket
             liste.Items.Clear();
             int TAdet = 0;
             double TTutar = 0;
-            SqlCommand comm = new SqlCommand("select SatisNo, Tarih, FilmAd, MusteriAd + ' ' + MusteriSoyad as Musteri, BirimFiyat, Adet, BirimFiyat*Adet as Tutar, fs.FilmNo, fs.MusteriNo from FilmSatis fs inner join Filmler f on fs.FilmNo = f.FilmNo inner join Musteriler m on fs.MusteriNo = m.MusteriNo where fs.Silindi = 0 order by Tarih desc, SatisNo desc", conn);
+            SqlCommand comm = new SqlCommand("select SatisNo, Tarih, FilmAd, MusteriAd + ' ' + MusteriSoyad as Musteri, BirimFiyat, Adet, BirimFiyat*Adet as Tutar, fs.MusteriNo, fs.FilmNo from FilmSatis fs inner join Filmler f on fs.FilmNo = f.FilmNo inner join Musteriler m on fs.MusteriNo = m.MusteriNo where fs.Silindi = 0 order by Tarih desc, SatisNo desc", conn);
             if (conn.State == ConnectionState.Closed) conn.Open();
             SqlDataReader dr;
             try
@@ -160,7 +160,7 @@ namespace VideoMarket
         public bool StokGuncelleBySatis(int FilmNo, int Adet)
         {
             bool Sonuc = false;
-            SqlCommand comm = new SqlCommand("update Filmler set Miktar -= @Adet where FilmNo = @FilmNo");
+            SqlCommand comm = new SqlCommand("update Filmler set Miktar -= @Adet where FilmNo = @FilmNo", conn);
             comm.Parameters.Add("@FilmNo", SqlDbType.Int).Value = FilmNo;
             comm.Parameters.Add("@Adet", SqlDbType.Int).Value = Adet;
             if (conn.State == ConnectionState.Closed) conn.Open();
@@ -170,6 +170,46 @@ namespace VideoMarket
             }
             catch (Exception ex)
             {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+
+            return Sonuc;
+        }
+
+        public bool SatisSil(int SatisNo)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("update FilmSatis set Silindi = 1 where SatisNo = @SatisNo", conn);
+            comm.Parameters.Add("@SatisNo", SqlDbType.Int).Value = SatisNo;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            finally { conn.Close(); }
+            return Sonuc;
+        }
+
+        public bool SatisGuncelle(int SatisNo, int Adet, double Fiyat)
+        {
+            bool Sonuc = false;
+            SqlCommand comm = new SqlCommand("update FilmSatis Adet = @Adet, BirimFiyat = @BirimFiyat where SatisNo = @SatisNo", conn);
+            comm.Parameters.Add("@SatisNo", SqlDbType.Int).Value = SatisNo;
+            comm.Parameters.Add("@Adet", SqlDbType.Int).Value = Adet;
+            comm.Parameters.Add("@BirimFiyat", SqlDbType.Money).Value = Fiyat;
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            try
+            {
+                Sonuc = Convert.ToBoolean(comm.ExecuteNonQuery());
+            }
+            catch (SqlException ex)
+            {
+
                 string hata = ex.Message;
             }
             finally { conn.Close(); }

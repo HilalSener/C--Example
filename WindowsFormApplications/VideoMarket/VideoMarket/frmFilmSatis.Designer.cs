@@ -170,6 +170,7 @@
             this.btnSil.TabIndex = 39;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnDegistir
             // 
@@ -180,6 +181,7 @@
             this.btnDegistir.TabIndex = 38;
             this.btnDegistir.Text = "Değiştir";
             this.btnDegistir.UseVisualStyleBackColor = true;
+            this.btnDegistir.Click += new System.EventHandler(this.btnDegistir_Click);
             // 
             // btnKaydet
             // 
@@ -280,6 +282,7 @@
             this.lvSatislar.TabIndex = 40;
             this.lvSatislar.UseCompatibleStateImageBehavior = false;
             this.lvSatislar.View = System.Windows.Forms.View.Details;
+            this.lvSatislar.DoubleClick += new System.EventHandler(this.lvSatislar_DoubleClick);
             // 
             // columnHeader1
             // 

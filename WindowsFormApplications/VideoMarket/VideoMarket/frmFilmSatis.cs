@@ -12,6 +12,9 @@ namespace VideoMarket
 {
     public partial class frmFilmSatis : Form
     {
+        int orjAdet;
+        double orjFiyat;
+
         public frmFilmSatis()
         {
             InitializeComponent();
@@ -136,7 +139,7 @@ namespace VideoMarket
                         fs.SatislariGetir(lvSatislar, txtToplamAdet, txtToplamTutar);
                         //Satılan film stoktan düşülmeli...
                         cFilm f = new cFilm();
-                        if (f.StokGuncelleBySatis(fs.FilmNo, fs.Adet))
+                        if (f.StokGuncelleBySatisEkle(fs.FilmNo, fs.Adet))
                             MessageBox.Show("Stok güncellendi!");
                         Temizle();
                         btnKaydet.Enabled = false;
@@ -151,6 +154,70 @@ namespace VideoMarket
             }
             else
                 MessageBox.Show("Mutlaka müştri ve film seçilmelidir!", "Dikkat, Eksik bilgi!");
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Silmek istiyor musunuz?", "Silinsin mi?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cFilmSatis fs = new cFilmSatis();
+                if(fs.SatisSil(Convert.ToInt32(txtSatisNo.Text)))
+                {
+                    MessageBox.Show("Satış bilgileri iptal edildi!");
+                    //İptal edilen satış miktarı stoğa iade edilmeli.
+                    cFilm f = new cFilm();
+                    if (f.StokGuncelleBySatisIptal(Convert.ToInt32(txtFilmNo.Text), Convert.ToInt32(txtAdet.Text)))
+                    {
+                        MessageBox.Show("Stok güncellendi.");
+                    }
+                    Temizle();
+                    fs.SatislariGetir(lvSatislar, txtToplamAdet, txtToplamTutar);
+                }
+            }
+        }
+
+        private void lvSatislar_DoubleClick(object sender, EventArgs e)
+        {
+            txtSatisNo.Text = lvSatislar.SelectedItems[0].SubItems[0].Text;
+            txtTarih.Text = lvSatislar.SelectedItems[0].SubItems[1].Text;
+            txtFilm.Text = lvSatislar.SelectedItems[0].SubItems[2].Text;
+            txtFilmNo.Text = lvSatislar.SelectedItems[0].SubItems[8].Text;
+            txtMusteri.Text = lvSatislar.SelectedItems[0].SubItems[3].Text;
+            txtMusteriNo.Text = lvSatislar.SelectedItems[0].SubItems[7].Text;
+            txtBirimFiyat.Text = lvSatislar.SelectedItems[0].SubItems[4].Text;
+            txtAdet.Text = lvSatislar.SelectedItems[0].SubItems[5].Text;
+            txtTutar.Text = lvSatislar.SelectedItems[0].SubItems[6].Text;
+            orjAdet = Convert.ToInt32(txtAdet.Text);
+            orjFiyat = Convert.ToDouble(txtBirimFiyat.Text);
+            btnDegistir.Enabled = true;
+            btnSil.Enabled = true;
+            btnKaydet.Enabled = false;
+            txtAdet.Focus();
+        }
+
+        private void btnDegistir_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtAdet.Text) == orjAdet && Convert.ToDouble(txtBirimFiyat.Text) == orjFiyat)
+            {
+                MessageBox.Show("Herhangi bir satış bilgisi değişmemiştir!");
+                txtAdet.Focus();
+            }
+            else
+            {
+                cFilmSatis fs = new cFilmSatis();
+                bool Sonuc = fs.SatisGuncelle(Convert.ToInt32(txtSatisNo.Text), Convert.ToInt32(txtAdet.Text), Convert.ToDouble(txtBirimFiyat.Text));
+                if (Sonuc) MessageBox.Show("Satış bilgileri güncellendi!");
+                if (Convert.ToInt32(txtAdet.Text) != orjAdet)
+                {
+                    cFilm f = new cFilm();
+                    if (f.StokGuncelleBySatisDegistir(Convert.ToInt32(txtFilmNo.Text), Convert.ToInt32(txtAdet.Text), orjAdet))
+                    {
+                        MessageBox.Show("Stok güncellendi!");
+                    }
+                }
+                Temizle();
+                fs.SatislariGetir(lvSatislar, txtToplamAdet, txtToplamTutar);
+            }
         }
     }
 }
