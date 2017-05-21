@@ -36,10 +36,15 @@ namespace dataSet
                 dgvSatislar.Columns["Adet"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 dgvSatislar.Columns["BirimFiyat"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dgvSatislar.Columns["Tutar"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                for (int i = 0; i < dgvSatislar.Rows.Count; i++)
+                //for (int i = 0; i < dgvSatislar.Rows.Count; i++)
+                //{
+                //    TAdet += Convert.ToInt32(dgvSatislar.Rows[i].Cells["Adet"].Value);
+                //    TTutar += Convert.ToDouble(dgvSatislar.Rows[i].Cells["Tutar"].Value);
+                //}
+                foreach (DataRow dr in dt.Rows)
                 {
-                    TAdet += Convert.ToInt32(dgvSatislar.Rows[i].Cells["Adet"].Value);
-                    TTutar += Convert.ToDouble(dgvSatislar.Rows[i].Cells["Tutar"].Value);
+                    TAdet += Convert.ToInt32(dr["Adet"]);
+                    TTutar += Convert.ToDouble(dr["Tutar"]);
                 }
             }
             catch (Exception ex)
