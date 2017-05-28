@@ -64,5 +64,12 @@ namespace VideoMarket
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void satışSorgulamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSatisSorgulama frm = new frmSatisSorgulama();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

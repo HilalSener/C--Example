@@ -134,6 +134,24 @@ namespace VideoMarket
             finally { conn.Close(); }
         }
 
+        public DataTable SatislariGetirByTarihlerArasi(DateTime Tarih1, DateTime Tarih2)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select SatisNo, Tarih, FilmAd, MusteriAd + ' ' + MusteriSoyad as Musteri, BirimFiyat, Adet, BirimFiyat*Adet as Tutar, fs.MusteriNo, fs.FilmNo from FilmSatis fs inner join Filmler f on fs.FilmNo = f.FilmNo inner join Musteriler m on fs.MusteriNo = m.MusteriNo where fs.Silindi = 0 and Convert(date, Tarih, 104)  between Convert(date, @Tarih1, 104) and Convert(date, @Tarih2, 104) order by Tarih desc, SatisNo desc", conn);
+            da.SelectCommand.Parameters.Add("@Tarih1",SqlDbType.Date).Value = Tarih1;
+            da.SelectCommand.Parameters.Add("@Tarih2", SqlDbType.Date).Value = Tarih2;
+            try
+            {
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return dt;
+        }
+
         public bool SatisEkle(cFilmSatis fs)
         {
             bool Sonuc = false;

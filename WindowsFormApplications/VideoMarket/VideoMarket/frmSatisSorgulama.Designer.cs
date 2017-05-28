@@ -77,23 +77,24 @@
             // 
             // btnGetir
             // 
-            this.btnGetir.Location = new System.Drawing.Point(322, 80);
+            this.btnGetir.Location = new System.Drawing.Point(345, 79);
             this.btnGetir.Name = "btnGetir";
             this.btnGetir.Size = new System.Drawing.Size(209, 33);
             this.btnGetir.TabIndex = 4;
             this.btnGetir.Text = "Satışları Getir";
             this.btnGetir.UseVisualStyleBackColor = true;
+            this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
             // 
             // dtpTarih1
             // 
-            this.dtpTarih1.Location = new System.Drawing.Point(105, 12);
+            this.dtpTarih1.Location = new System.Drawing.Point(105, 32);
             this.dtpTarih1.Name = "dtpTarih1";
             this.dtpTarih1.Size = new System.Drawing.Size(200, 22);
             this.dtpTarih1.TabIndex = 9;
             // 
             // dtpTarih2
             // 
-            this.dtpTarih2.Location = new System.Drawing.Point(587, 12);
+            this.dtpTarih2.Location = new System.Drawing.Point(587, 32);
             this.dtpTarih2.Name = "dtpTarih2";
             this.dtpTarih2.Size = new System.Drawing.Size(200, 22);
             this.dtpTarih2.TabIndex = 9;

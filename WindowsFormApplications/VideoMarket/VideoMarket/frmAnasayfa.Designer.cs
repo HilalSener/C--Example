@@ -135,6 +135,7 @@
             this.satışSorgulamaToolStripMenuItem.Name = "satışSorgulamaToolStripMenuItem";
             this.satışSorgulamaToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.satışSorgulamaToolStripMenuItem.Text = "Satış Sorgulama";
+            this.satışSorgulamaToolStripMenuItem.Click += new System.EventHandler(this.satışSorgulamaToolStripMenuItem_Click);
             // 
             // raporlamaToolStripMenuItem
             // 
