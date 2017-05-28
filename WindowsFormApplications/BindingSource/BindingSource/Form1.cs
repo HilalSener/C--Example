@@ -93,5 +93,14 @@ namespace BindingSource
             MessageBox.Show("Müşteri bilgileri değiştirildi");
             Konum();
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Silmek istiyor musunuz?", "Silinsin mi?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                bs1.RemoveAt(bs1.Position);
+                bs1.EndEdit();
+            }
+        }
     }
 }

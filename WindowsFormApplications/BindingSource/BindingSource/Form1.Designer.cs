@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
+            this.musteriNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musteriAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musteriSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.silindiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bs1 = new System.Windows.Forms.BindingSource(this.components);
+            this.videoMarketDataSet = new BindingSource.VideoMarketDataSet();
             this.txtAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSoyadi = new System.Windows.Forms.TextBox();
@@ -43,14 +51,6 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.btnLast = new System.Windows.Forms.Button();
             this.lblKonum = new System.Windows.Forms.Label();
-            this.bs1 = new System.Windows.Forms.BindingSource(this.components);
-            this.videoMarketDataSet = new BindingSource.VideoMarketDataSet();
-            this.musteriNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.musteriAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.musteriSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.silindiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.musterilerTableAdapter = new BindingSource.VideoMarketDataSetTableAdapters.MusterilerTableAdapter();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -82,6 +82,53 @@
             this.dgvMusteriler.Size = new System.Drawing.Size(842, 385);
             this.dgvMusteriler.TabIndex = 0;
             this.dgvMusteriler.SelectionChanged += new System.EventHandler(this.dgvMusteriler_SelectionChanged);
+            // 
+            // musteriNoDataGridViewTextBoxColumn
+            // 
+            this.musteriNoDataGridViewTextBoxColumn.DataPropertyName = "MusteriNo";
+            this.musteriNoDataGridViewTextBoxColumn.HeaderText = "MusteriNo";
+            this.musteriNoDataGridViewTextBoxColumn.Name = "musteriNoDataGridViewTextBoxColumn";
+            this.musteriNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // musteriAdDataGridViewTextBoxColumn
+            // 
+            this.musteriAdDataGridViewTextBoxColumn.DataPropertyName = "MusteriAd";
+            this.musteriAdDataGridViewTextBoxColumn.HeaderText = "MusteriAd";
+            this.musteriAdDataGridViewTextBoxColumn.Name = "musteriAdDataGridViewTextBoxColumn";
+            // 
+            // musteriSoyadDataGridViewTextBoxColumn
+            // 
+            this.musteriSoyadDataGridViewTextBoxColumn.DataPropertyName = "MusteriSoyad";
+            this.musteriSoyadDataGridViewTextBoxColumn.HeaderText = "MusteriSoyad";
+            this.musteriSoyadDataGridViewTextBoxColumn.Name = "musteriSoyadDataGridViewTextBoxColumn";
+            // 
+            // telefonDataGridViewTextBoxColumn
+            // 
+            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.HeaderText = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
+            // 
+            // adresDataGridViewTextBoxColumn
+            // 
+            this.adresDataGridViewTextBoxColumn.DataPropertyName = "Adres";
+            this.adresDataGridViewTextBoxColumn.HeaderText = "Adres";
+            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
+            // 
+            // silindiDataGridViewCheckBoxColumn
+            // 
+            this.silindiDataGridViewCheckBoxColumn.DataPropertyName = "Silindi";
+            this.silindiDataGridViewCheckBoxColumn.HeaderText = "Silindi";
+            this.silindiDataGridViewCheckBoxColumn.Name = "silindiDataGridViewCheckBoxColumn";
+            // 
+            // bs1
+            // 
+            this.bs1.DataMember = "Musteriler";
+            this.bs1.DataSource = this.videoMarketDataSet;
+            // 
+            // videoMarketDataSet
+            // 
+            this.videoMarketDataSet.DataSetName = "VideoMarketDataSet";
+            this.videoMarketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtAdi
             // 
@@ -200,53 +247,6 @@
             this.lblKonum.TabIndex = 4;
             this.lblKonum.Text = "1/100";
             // 
-            // bs1
-            // 
-            this.bs1.DataMember = "Musteriler";
-            this.bs1.DataSource = this.videoMarketDataSet;
-            // 
-            // videoMarketDataSet
-            // 
-            this.videoMarketDataSet.DataSetName = "VideoMarketDataSet";
-            this.videoMarketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // musteriNoDataGridViewTextBoxColumn
-            // 
-            this.musteriNoDataGridViewTextBoxColumn.DataPropertyName = "MusteriNo";
-            this.musteriNoDataGridViewTextBoxColumn.HeaderText = "MusteriNo";
-            this.musteriNoDataGridViewTextBoxColumn.Name = "musteriNoDataGridViewTextBoxColumn";
-            this.musteriNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // musteriAdDataGridViewTextBoxColumn
-            // 
-            this.musteriAdDataGridViewTextBoxColumn.DataPropertyName = "MusteriAd";
-            this.musteriAdDataGridViewTextBoxColumn.HeaderText = "MusteriAd";
-            this.musteriAdDataGridViewTextBoxColumn.Name = "musteriAdDataGridViewTextBoxColumn";
-            // 
-            // musteriSoyadDataGridViewTextBoxColumn
-            // 
-            this.musteriSoyadDataGridViewTextBoxColumn.DataPropertyName = "MusteriSoyad";
-            this.musteriSoyadDataGridViewTextBoxColumn.HeaderText = "MusteriSoyad";
-            this.musteriSoyadDataGridViewTextBoxColumn.Name = "musteriSoyadDataGridViewTextBoxColumn";
-            // 
-            // telefonDataGridViewTextBoxColumn
-            // 
-            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "Telefon";
-            this.telefonDataGridViewTextBoxColumn.HeaderText = "Telefon";
-            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
-            // 
-            // adresDataGridViewTextBoxColumn
-            // 
-            this.adresDataGridViewTextBoxColumn.DataPropertyName = "Adres";
-            this.adresDataGridViewTextBoxColumn.HeaderText = "Adres";
-            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
-            // 
-            // silindiDataGridViewCheckBoxColumn
-            // 
-            this.silindiDataGridViewCheckBoxColumn.DataPropertyName = "Silindi";
-            this.silindiDataGridViewCheckBoxColumn.HeaderText = "Silindi";
-            this.silindiDataGridViewCheckBoxColumn.Name = "silindiDataGridViewCheckBoxColumn";
-            // 
             // musterilerTableAdapter
             // 
             this.musterilerTableAdapter.ClearBeforeFill = true;
@@ -292,6 +292,7 @@
             this.btnRemove.TabIndex = 5;
             this.btnRemove.Text = "Sil";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // label5
             // 
