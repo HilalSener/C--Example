@@ -17,7 +17,7 @@ namespace BindingMusteriler
             InitializeComponent();
         }
 
-        BindingSource bs1 = new BindingSource();
+        BindingSource bs1;
         DataSet ds = new DataSet();
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,7 +33,43 @@ namespace BindingMusteriler
 
         private void DataBagla()
         {
+            bs1 = new BindingSource();
+            cMusteri m = new cMusteri();
+            ds = m.GetMusteriler();
+            bs1.DataSource = ds.Tables["Musteriler"];
 
+            txtAdi.DataBindings.Add("Text", bs1, "MusteriAd");
+            txtSoyadi.DataBindings.Add("Text", bs1, "MusteriSoyad");
+            txtTelefon.DataBindings.Add("Text", bs1, "Telefon");
+            txtAdres.DataBindings.Add("Text", bs1, "Adres");
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            //bs1.MoveFirst();
+            bs1.Position = 0;
+            Konum();
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            //bs1.MovePrevious();
+            bs1.Position -= 1;
+            Konum();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            //bs1.MoveNext();
+            bs1.Position += 1;
+            Konum();
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            //bs1.MoveLast();
+            bs1.Position = bs1.Count - 1;
+            Konum();
         }
     }
 }
