@@ -21,26 +21,77 @@ namespace BindingSource
         {
             // TODO: This line of code loads data into the 'videoMarketDataSet.Musteriler' table. You can move, or remove it, as needed.
             this.musterilerTableAdapter.Fill(this.videoMarketDataSet.Musteriler);
+            //Konum();
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-            bs1.MoveFirst();
+            //bs1.MoveFirst();
+            bs1.Position = 0;
+            //Konum();
         }
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            bs1.MovePrevious();
+            //bs1.MovePrevious();
+            bs1.Position -= 1;
+            //Konum();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            bs1.MoveNext();
+            //bs1.MoveNext();
+            bs1.Position += 1;
+            //Konum();
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            bs1.MoveLast();
+            //bs1.MoveLast();
+            bs1.Position = bs1.Count - 1;
+            //Konum();
+        }
+
+        private void Konum()
+        {
+            lblKonum.Text = (bs1.Position + 1) + " / " + (bs1.Count);
+        }
+
+        private void dgvMusteriler_SelectionChanged(object sender, EventArgs e)
+        {
+            Konum();
+            btnRemove.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnSave.Enabled = false;
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            bs1.AddNew();
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
+            btnRemove.Enabled = false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            cbxSilindi.Checked = true;
+            cbxSilindi.Checked = false;
+            bs1.EndEdit();
+            this.musterilerTableAdapter.Update(videoMarketDataSet.Musteriler);
+            btnSave.Enabled = false;
+            MessageBox.Show("Müşteri kayıt edildi");
+            Konum();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            bs1.EndEdit();
+            this.musterilerTableAdapter.Update(videoMarketDataSet.Musteriler);
+            btnUpdate.Enabled = false;
+            btnRemove.Enabled = false;
+            MessageBox.Show("Müşteri bilgileri değiştirildi");
+            Konum();
         }
     }
 }
