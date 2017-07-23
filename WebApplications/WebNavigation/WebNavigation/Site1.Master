@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebNavigation.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master Page ve Navigation Kullanımı</title>
+    <link href="Content/Sablon.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="govde">
+                gövde (body)
+            <div id="baslik">
+                başlık (header)
+        </div>
+        <div id="ustmenu">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="Medium" PathSeparator=" : ">
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+            </asp:SiteMapPath>
+        </div>
+        <div id="solmenu">
+            <h3>Eğitimlerimiz</h3>
+            <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" ForeColor="#284E98" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#B5C7DE" />
+                <DynamicSelectedStyle BackColor="#507CD1" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Windows.aspx" Text="Windows App." Value="Windows App.">
+                        <asp:MenuItem NavigateUrl="~/Console.aspx" Text="Console App." Value="Console App."></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Forms.aspx" Text="Forms App." Value="Forms App."></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Web.aspx" Text="Asp.Net Web App." Value="Asp.Net Web App.">
+                        <asp:MenuItem NavigateUrl="~/WebForms.aspx" Text="WebForms App." Value="WebForms App."></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/MVC.aspx" Text="MVC App." Value="MVC App."></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Mobile.aspx" Text="Mobile Projects" Value="Mobile Projects">
+                        <asp:MenuItem NavigateUrl="~/WindowsPhone.aspx" Text="WindowsPhone" Value="WindowsPhone"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Android.aspx" Text="Android" Value="Android"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/IOS.aspx" Text="IOS" Value="IOS"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#507CD1" />
+
+            </asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            <asp:TreeView ID="TreeView2" runat="server" DataSourceID="SiteMapDataSource1">
+            </asp:TreeView>
+        </div>
+        <div id="icerik">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="sagmenu">
+            sağ menü (aside)
+        <div class="sagicmenu">
+            <asp:TreeView ID="TreeView1" runat="server" ImageSet="Arrows">
+                <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                <Nodes>
+                    <asp:TreeNode NavigateUrl="~/Windows.aspx" Text="Windows App." Value="Windows App.">
+                        <asp:TreeNode NavigateUrl="~/Console.aspx" Text="Console" Value="Console"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Forms.aspx" Text="Forms" Value="Forms"></asp:TreeNode>
+                    </asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/Web.aspx" Text="Asp.Net Web App." Value="Asp.Net Web App."></asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/Mobile.aspx" Text="Mobile" Value="Mobile"></asp:TreeNode>
+                </Nodes>
+                <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                <ParentNodeStyle Font-Bold="False" />
+                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+
+            </asp:TreeView>
+        </div>
+        <div class="sagicmenu">
+            sepet işlemleri
+        </div>
+        <div class="sagicmenu">
+            reklam
+        </div>
+        </div>
+        <div id="altbaslik">
+            &copy;Copyright HSS-Yaz 13 2017 
+        </div>
+        </div>
+    </form>
+</body>
+</html>

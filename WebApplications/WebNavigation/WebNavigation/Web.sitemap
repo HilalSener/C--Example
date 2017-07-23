@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Anasayfa"  description="">
+      <siteMapNode url="~/Windows.aspx" title="Windows App."  description="" >
+        <siteMapNode url="~/Console.aspx" title="Console App."  description="" />
+        <siteMapNode url="~/Forms.aspx" title="Windows Form App."  description="" />
+      </siteMapNode>
+      <siteMapNode url="~/Web.aspx" title="Asp.Net Web App."  description="" >
+        <siteMapNode url="~/WebForms.aspx" title="Asp.Net Web Forms"  description="" />
+        <siteMapNode url="~/MVC.aspx" title="Asp.Net MVC"  description="" />
+      </siteMapNode>
+      <siteMapNode url="~/Mobile.aspx" title="Mobile App."  description="" >
+        <siteMapNode url="~/WindowsPhone.aspx" title="Windows Phone App."  description="" />
+        <siteMapNode url="~/Android.aspx" title="Android App."  description="" />
+        <siteMapNode url="~/IOS.aspx" title="IOS App."  description="" />
+      </siteMapNode>
+      <siteMapNode url="~/Database.aspx" title="Database Management"  description="" >
+        <siteMapNode url="~/MSSQL.aspx" title="MSSQL Server"  description="" />
+        <siteMapNode url="~/Oracle.aspx" title="Oracle Server"  description="" />
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>
