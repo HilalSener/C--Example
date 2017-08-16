@@ -1,0 +1,17 @@
+﻿#baslik {
+            width:1000px; 
+            height:130px; 
+            background-color:steelblue; 
+            color:white; 
+            margin:10px
+        }
+.egik {font-style:italic}
+.kirmizi {color:red}
+.ortala {text-align:center}
+#ustmenu {width:1000px; height:40px; background-color:steelblue; color:white; margin:10px}
+#solmenu {float:left;width:200px; height:300px; background-color:lightgreen; color:white; margin-left:10px; margin-right:10px; margin-bottom:10px}
+#icerik {float:left;width:560px; height:300px; background-color:white; color:black; margin-left:10px; margin-right:10px}
+#sagmenu {float:left;width:200px; height:300px; background-color:lightgreen; color:white; margin-left:10px; margin-right:10px}
+.sagicmenu {width:180px; height:80px; background-color:forestgreen; margin:10px}
+#altbaslik {clear:both; width:1000px; height:30px; background-color:darkblue; color:white; margin:10px; margin-top:20px;text-align:center}
+

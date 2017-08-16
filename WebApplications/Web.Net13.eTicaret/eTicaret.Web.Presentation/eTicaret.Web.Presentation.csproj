@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{64FD9571-AD45-4041-8D78-7A1F15E93B2E}</ProjectGuid>
+    <ProjectGuid>{B7AF348A-1BA9-40A3-8C92-1ECEB3A463AD}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -48,34 +48,6 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\eTicaret.DAL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -141,19 +113,184 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\KategoriEkle.aspx" />
+    <Content Include="Admin\Login.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\animations.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\print-invoice.css" />
+    <Content Include="Content\css\red.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\animation.css" />
+    <Content Include="Content\fonts\font-awesome.css" />
+    <Content Include="Content\fonts\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\fontello-codes.css" />
+    <Content Include="Content\fonts\fontello-embedded.css" />
+    <Content Include="Content\fonts\fontello-ie7-codes.css" />
+    <Content Include="Content\fonts\fontello-ie7.css" />
+    <Content Include="Content\fonts\fontello.css" />
+    <Content Include="Content\images\delete.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\large\AlinAynasi.jpg" />
+    <Content Include="Content\images\large\AlindanAtesOlcer.jpg" />
+    <Content Include="Content\images\large\AlinLambasi.jpg" />
+    <Content Include="Content\images\large\AsiNakilKabi.jpg" />
+    <Content Include="Content\images\large\BoyOlcerDuvarTipi.jpg" />
+    <Content Include="Content\images\large\DijitalBoyOlcerliBaskul.jpg" />
+    <Content Include="Content\images\large\EKGTekKanalli.jpg" />
+    <Content Include="Content\images\large\EKGUCKanalli.jpg" />
+    <Content Include="Content\images\large\OtoskopHalojen.jpg" />
+    <Content Include="Content\images\large\RiaSeti.jpg" />
+    <Content Include="Content\images\loader.gif" />
+    <Content Include="Content\images\portfolio-item-banner.jpg" />
+    <Content Include="Content\images\product-1-1.png" />
+    <Content Include="Content\images\product-1-2.png" />
+    <Content Include="Content\images\product-1-3.png" />
+    <Content Include="Content\images\product-1.png" />
+    <Content Include="Content\images\product-2.png" />
+    <Content Include="Content\images\product-3.png" />
+    <Content Include="Content\images\product-4.png" />
+    <Content Include="Content\images\product-5.png" />
+    <Content Include="Content\images\product-6.png" />
+    <Content Include="Content\images\product-7.png" />
+    <Content Include="Content\images\product-8.png" />
+    <Content Include="Content\images\SaglikLogo.gif" />
+    <Content Include="Content\images\SaglikLogo.png" />
+    <Content Include="Content\images\Sepet.png" />
+    <Content Include="Content\images\services-1.png" />
+    <Content Include="Content\images\small\AbdominalKorse.jpg" />
+    <Content Include="Content\images\small\AlinAynasi.jpg" />
+    <Content Include="Content\images\small\AlindanAtesOlcer.jpg" />
+    <Content Include="Content\images\small\AlinLambasi.jpg" />
+    <Content Include="Content\images\small\AneroidTansiyon.jpg" />
+    <Content Include="Content\images\small\AsiNakilKabi.jpg" />
+    <Content Include="Content\images\small\BilektenOlcenTansiyon.jpg" />
+    <Content Include="Content\images\small\BoyOlcerDuvarTipi.jpg" />
+    <Content Include="Content\images\small\DijitalBoyOlcerliBaskul.jpg" />
+    <Content Include="Content\images\small\DopplerElCep.jpg" />
+    <Content Include="Content\images\small\EKGTekKanalli.jpg" />
+    <Content Include="Content\images\small\EKGUCKanalli.jpg" />
+    <Content Include="Content\images\small\GazliBez.jpg" />
+    <Content Include="Content\images\small\HemoglabinStribi.jpg" />
+    <Content Include="Content\images\small\kartlar.png" />
+    <Content Include="Content\images\small\LigamentDestekli.jpg" />
+    <Content Include="Content\images\small\NelsonBoyunluk.jpg" />
+    <Content Include="Content\images\small\OtoskopHalojen.jpg" />
+    <Content Include="Content\images\small\PatellaDestekli.jpg" />
+    <Content Include="Content\images\small\PosetEldiven.jpg" />
+    <Content Include="Content\images\small\PosturexKorse.jpg" />
+    <Content Include="Content\images\small\PudraliMuayene.jpg" />
+    <Content Include="Content\images\small\RiaSeti.jpg" />
+    <Content Include="Content\images\small\SungerBoyunluk.jpg" />
+    <Content Include="Content\images\small\UcKanalliYorumlu.jpg" />
+    <Content Include="Content\js\coming.soon.config.js" />
+    <Content Include="Content\js\custom.js" />
+    <Content Include="Content\js\google.map.config.js" />
+    <Content Include="Content\js\template.js" />
+    <Content Include="Content\plugins\AjaxLoader.gif" />
+    <Content Include="Content\plugins\grabbing.png" />
+    <Content Include="Content\plugins\isotope.pkgd.min.js" />
+    <Content Include="Content\plugins\jquery.appear.js" />
+    <Content Include="Content\plugins\jquery.countTo.js" />
+    <Content Include="Content\plugins\jquery.js" />
+    <Content Include="Content\plugins\jquery.knob.min.js" />
+    <Content Include="Content\plugins\jquery.magnific-popup.js" />
+    <Content Include="Content\plugins\jquery.magnific-popup.min.js" />
+    <Content Include="Content\plugins\jquery.min.js" />
+    <Content Include="Content\plugins\jquery.parallax-1.1.3.js" />
+    <Content Include="Content\plugins\jquery.sharrre.js" />
+    <Content Include="Content\plugins\jquery.validate.js" />
+    <Content Include="Content\plugins\magnific-popup.css" />
+    <Content Include="Content\plugins\modernizr.js" />
+    <Content Include="Content\plugins\owl.carousel.css" />
+    <Content Include="Content\plugins\owl.carousel.js" />
+    <Content Include="Content\plugins\owl.carousel.min.js" />
+    <Content Include="Content\plugins\owl.theme.css" />
+    <Content Include="Content\plugins\owl.transitions.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\animation.css" />
+    <Content Include="fonts\font-awesome.css" />
+    <Content Include="fonts\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontello-codes.css" />
+    <Content Include="fonts\fontello-embedded.css" />
+    <Content Include="fonts\fontello-ie7-codes.css" />
+    <Content Include="fonts\fontello-ie7.css" />
+    <Content Include="fonts\fontello.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\plugins\jquery-1.11.1.min.map" />
+    <Content Include="eTicaret.Master" />
+    <Content Include="fonts\bordered-pulled.less" />
+    <Content Include="fonts\core.less" />
+    <Content Include="fonts\fixed-width.less" />
+    <Content Include="fonts\font-awesome.less" />
+    <Content Include="fonts\font-awesome.scss" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\icons.less" />
+    <Content Include="fonts\larger.less" />
+    <Content Include="fonts\list.less" />
+    <Content Include="fonts\mixins.less" />
+    <Content Include="fonts\path.less" />
+    <Content Include="fonts\rotated-flipped.less" />
+    <Content Include="fonts\spinning.less" />
+    <Content Include="fonts\stacked.less" />
+    <Content Include="fonts\variables.less" />
+    <Content Include="fonts\_bordered-pulled.scss" />
+    <Content Include="fonts\_core.scss" />
+    <Content Include="fonts\_fixed-width.scss" />
+    <Content Include="fonts\_icons.scss" />
+    <Content Include="fonts\_larger.scss" />
+    <Content Include="fonts\_list.scss" />
+    <Content Include="fonts\_mixins.scss" />
+    <Content Include="fonts\_path.scss" />
+    <Content Include="fonts\_rotated-flipped.scss" />
+    <Content Include="fonts\_spinning.scss" />
+    <Content Include="fonts\_stacked.scss" />
+    <Content Include="fonts\_variables.scss" />
+    <Content Include="Content\fonts\bordered-pulled.less" />
+    <Content Include="Content\fonts\core.less" />
+    <Content Include="Content\fonts\fixed-width.less" />
+    <Content Include="Content\fonts\font-awesome.less" />
+    <Content Include="Content\fonts\font-awesome.scss" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\icons.less" />
+    <Content Include="Content\fonts\larger.less" />
+    <Content Include="Content\fonts\list.less" />
+    <Content Include="Content\fonts\mixins.less" />
+    <Content Include="Content\fonts\path.less" />
+    <Content Include="Content\fonts\rotated-flipped.less" />
+    <Content Include="Content\fonts\spinning.less" />
+    <Content Include="Content\fonts\stacked.less" />
+    <Content Include="Content\fonts\variables.less" />
+    <Content Include="Content\fonts\_bordered-pulled.scss" />
+    <Content Include="Content\fonts\_core.scss" />
+    <Content Include="Content\fonts\_fixed-width.scss" />
+    <Content Include="Content\fonts\_icons.scss" />
+    <Content Include="Content\fonts\_larger.scss" />
+    <Content Include="Content\fonts\_list.scss" />
+    <Content Include="Content\fonts\_mixins.scss" />
+    <Content Include="Content\fonts\_path.scss" />
+    <Content Include="Content\fonts\_rotated-flipped.scss" />
+    <Content Include="Content\fonts\_spinning.scss" />
+    <Content Include="Content\fonts\_stacked.scss" />
+    <Content Include="Content\fonts\_variables.scss" />
+    <Content Include="Admin\Admin.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="SatinAl.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -183,10 +320,12 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Site.Master" />
+    <Content Include="Sepet.aspx" />
+    <Content Include="ucUrunler.ascx" />
+    <Content Include="UrunDetay.aspx" />
+    <Content Include="UyeKayit.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -199,22 +338,36 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KategoriEkle.aspx.cs">
+      <DependentUpon>KategoriEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KategoriEkle.aspx.designer.cs">
+      <DependentUpon>KategoriEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -222,25 +375,62 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="eTicaret.Master.cs">
+      <DependentUpon>eTicaret.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eTicaret.Master.designer.cs">
+      <DependentUpon>eTicaret.Master</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\cEnums.cs" />
+    <Compile Include="Models\cSepet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
+    <Compile Include="SatinAl.aspx.cs">
+      <DependentUpon>SatinAl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
+    <Compile Include="SatinAl.aspx.designer.cs">
+      <DependentUpon>SatinAl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sepet.aspx.cs">
+      <DependentUpon>Sepet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sepet.aspx.designer.cs">
+      <DependentUpon>Sepet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ucUrunler.ascx.cs">
+      <DependentUpon>ucUrunler.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ucUrunler.ascx.designer.cs">
+      <DependentUpon>ucUrunler.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UrunDetay.aspx.cs">
+      <DependentUpon>UrunDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UrunDetay.aspx.designer.cs">
+      <DependentUpon>UrunDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UyeKayit.aspx.cs">
+      <DependentUpon>UyeKayit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UyeKayit.aspx.designer.cs">
+      <DependentUpon>UyeKayit.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eTicaret.BLL\eTicaret.BLL.csproj">
-      <Project>{8edee431-bed6-4007-8ee5-18b28d5f84d0}</Project>
+      <Project>{8da3c6dd-d06e-43d5-864c-688902e3ee48}</Project>
       <Name>eTicaret.BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\eTicaret.DAL\eTicaret.DAL.csproj">
-      <Project>{04a3cb2e-7a4c-4901-9576-60dea6fd94c1}</Project>
+      <Project>{acf7db6e-1fbb-4888-847f-d81449500837}</Project>
       <Name>eTicaret.DAL</Name>
     </ProjectReference>
   </ItemGroup>
@@ -257,9 +447,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>13989</DevelopmentServerPort>
+          <DevelopmentServerPort>12627</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:13989/</IISUrl>
+          <IISUrl>http://localhost:12627/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

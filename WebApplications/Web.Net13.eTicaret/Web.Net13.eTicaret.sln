@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.DAL", "eTicaret.DAL\eTicaret.DAL.csproj", "{04A3CB2E-7A4C-4901-9576-60DEA6FD94C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.DAL", "eTicaret.DAL\eTicaret.DAL.csproj", "{ACF7DB6E-1FBB-4888-847F-D81449500837}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.BLL", "eTicaret.BLL\eTicaret.BLL.csproj", "{8EDEE431-BED6-4007-8EE5-18B28D5F84D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.BLL", "eTicaret.BLL\eTicaret.BLL.csproj", "{8DA3C6DD-D06E-43D5-864C-688902E3EE48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Web.Presentation", "eTicaret.Web.Presentation\eTicaret.Web.Presentation.csproj", "{64FD9571-AD45-4041-8D78-7A1F15E93B2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Web.Presentation", "eTicaret.Web.Presentation\eTicaret.Web.Presentation.csproj", "{B7AF348A-1BA9-40A3-8C92-1ECEB3A463AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{04A3CB2E-7A4C-4901-9576-60DEA6FD94C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04A3CB2E-7A4C-4901-9576-60DEA6FD94C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04A3CB2E-7A4C-4901-9576-60DEA6FD94C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04A3CB2E-7A4C-4901-9576-60DEA6FD94C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EDEE431-BED6-4007-8EE5-18B28D5F84D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EDEE431-BED6-4007-8EE5-18B28D5F84D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EDEE431-BED6-4007-8EE5-18B28D5F84D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EDEE431-BED6-4007-8EE5-18B28D5F84D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64FD9571-AD45-4041-8D78-7A1F15E93B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64FD9571-AD45-4041-8D78-7A1F15E93B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64FD9571-AD45-4041-8D78-7A1F15E93B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64FD9571-AD45-4041-8D78-7A1F15E93B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF7DB6E-1FBB-4888-847F-D81449500837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF7DB6E-1FBB-4888-847F-D81449500837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF7DB6E-1FBB-4888-847F-D81449500837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF7DB6E-1FBB-4888-847F-D81449500837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA3C6DD-D06E-43D5-864C-688902E3EE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA3C6DD-D06E-43D5-864C-688902E3EE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA3C6DD-D06E-43D5-864C-688902E3EE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA3C6DD-D06E-43D5-864C-688902E3EE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7AF348A-1BA9-40A3-8C92-1ECEB3A463AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AF348A-1BA9-40A3-8C92-1ECEB3A463AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AF348A-1BA9-40A3-8C92-1ECEB3A463AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AF348A-1BA9-40A3-8C92-1ECEB3A463AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{04A3CB2E-7A4C-4901-9576-60DEA6FD94C1}</ProjectGuid>
+    <ProjectGuid>{ACF7DB6E-1FBB-4888-847F-D81449500837}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>eTicaret.DAL</RootNamespace>
@@ -57,9 +57,9 @@
     <Compile Include="Core\Satis.cs" />
     <Compile Include="Core\SatisDetay.cs" />
     <Compile Include="Core\Urun.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

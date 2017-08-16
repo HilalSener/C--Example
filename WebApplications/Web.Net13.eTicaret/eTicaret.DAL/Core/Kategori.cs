@@ -12,17 +12,16 @@ namespace eTicaret.DAL.Core
     {
         [Key]
         public int id { get; set; }
-
         [Required]
         [MaxLength(50)]
         public string kategoriad { get; set; }
-        public string aciklama { get; set; }
 
+        public string aciklama { get; set; }
         [Required]
         [DefaultValue(false)]
         public bool silindi { get; set; }
-        public virtual List<AltKategori> AltKategoriler { get; set; }
 
+        public virtual List<AltKategori> AltKategoriler { get; set; }
         public virtual List<Urun> Urunler { get; set; }
     }
 }
