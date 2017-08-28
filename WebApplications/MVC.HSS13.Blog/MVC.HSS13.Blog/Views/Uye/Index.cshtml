@@ -1,0 +1,23 @@
+﻿@model List<MVC.HSS13.Blog.Models.UyeModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#btnGetir').click(function () {
+            $.getJSON("/Uye/UyeListesi", function (data) {
+                $.each(data, function (i, eleman) {
+                    $('#divUyeListesi').append((i + 1) + ".üye: " + eleman.uyeAdSoyad + ", email: " + eleman.email + "<br />")
+                });
+            });
+        });
+    });
+</script>
+&nbsp;&nbsp;&nbsp;&nbsp;<input id="btnGetir" type="submit" value="Üyeleri Listele" /><br /><br />
+<div id="divUyeListesi" style="margin-left:20px">
+    <h2>Tüm Üyeler</h2>
+
+</div>

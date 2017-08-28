@@ -1,0 +1,47 @@
+﻿@model Blog.DAL.DataModel.Makale
+
+@{
+    ViewBag.Title = "MakaleByYorum";
+}
+
+<div class="masonry-grid-item col-sm-6">
+    <!-- blogpost start -->
+    <article class="clearfix blogpost">
+        <div class="blogpost-body">
+            <div class="post-info">
+                <span class="day">@Model.Tarih.Day</span>
+                @{
+                    string[] Aylar = { "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Hazrn", "Temmz", "Agust", "Eylül", "Ekim", "Kasım", "Aralık" };
+                }
+                <span class="month">@Aylar[@Model.Tarih.Month] &nbsp; @Model.Tarih.Year</span>
+            </div>
+            <div class="blogpost-content">
+                <header>
+                    <h2 class="title">@Model.Baslik</h2>
+                    @{ string adsoyad = Model.Uye.Ad + " " + Model.Uye.Soyad; }
+                    <div class="submitted">
+                        <i class="fa fa-user pr-5"></i>
+                        by <a href="#">@adsoyad</a>
+                    </div>
+                </header>
+                @*<p>@Model.Icerik</p>*@
+                <p>@Html.Raw(@Model.Icerik)</p>
+            </div>
+        </div>
+        @{
+            var yorumSayisi = Model.Yorumlar.Count();
+            var etiketSayisi = Model.Etiketler.Count();
+        }
+        <footer class="clearfix">
+            <ul class="links pull-left">
+                <li><i class="fa fa-comment-o pr-5"></i><a href="#">@yorumSayisi yorum</a> |</li>
+                <li><i class="fa fa-tags pr-5"></i><a href="#">etiket @etiketSayisi</a> |</li>
+            </ul>
+            <a class="pull-right link" href="#"><span>Read more</span></a>
+        </footer>
+    </article>
+    <!-- blogpost end -->
+</div>
+
+
+

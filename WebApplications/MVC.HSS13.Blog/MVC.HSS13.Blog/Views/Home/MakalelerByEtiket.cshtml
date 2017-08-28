@@ -1,0 +1,8 @@
+﻿@model List<Blog.DAL.DataModel.Makale>
+
+@{
+    ViewBag.Title = "MakalelerByEtiket";
+}
+
+@Html.Partial("SonMakaleler", Model)
+@*Bu sayfada yeniden tasarım yapıp makaleleri göstermek yerine, SonMakaleler Partial View sayfasına gönderiyoruz. Ancak giderken tıklanan etiketin ilişkili olduğu makaleleri içinde bulunduran sayfanın Model koleksiyonunu gönderiyoruz.*@

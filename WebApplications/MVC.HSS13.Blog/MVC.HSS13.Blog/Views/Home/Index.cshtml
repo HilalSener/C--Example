@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Anasayfa";
+ }
+
+<div class="masonry-grid row">
+    <div class="col-md-9">
+        @Html.Action("SonMakaleler","Home")
+    </div>
+    <div class="col-md-3">
+        <div class="separator"></div>
+        @Html.Action("SonYorumlar", "Home")
+        @Html.Action("CokKullanilanEtiketler", "Home")
+    </div>
+</div>

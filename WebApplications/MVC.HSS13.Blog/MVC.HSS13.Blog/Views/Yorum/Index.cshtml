@@ -1,0 +1,29 @@
+﻿@model List<Blog.DAL.DataModel.Yorum>
+
+@{
+    ViewBag.Title = "Index";
+}
+@*@Html.Partial("~/Views/Home/SonYorumlar.cshtml", Model);*@
+
+@foreach (var y in Model)
+{
+    <div class="row">
+        <div class="panel panel-default col-lg-9">
+            <header>
+                @{ string adsoyad = y.Uye.Ad + " " + y.Uye.Soyad; }
+                <div class="submitted">
+                    <i class="fa fa-user pr-5"></i>
+                    by <a href="#">@adsoyad</a>
+                </div>
+            </header>
+            makale : @Html.ActionLink(@y.Makale.Baslik, "MakaleByYorum", new { makaleID = y.Makale.MakaleID })
+            <div class="panel-body">
+                <div class="image-box-body">
+                    <h4>yorum içeriği</h4>
+                    <p>@Html.Raw(@y.Icerik)</p>
+                    <a class="pull-right link" href="#"><span>Read more</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
